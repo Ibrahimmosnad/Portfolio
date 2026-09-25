@@ -17,6 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter+Tight:wght@400;500;600&amp;display=swap">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/service-anims.css">
   <script>!function(d){var h=d.documentElement;h.classList.add('js');try{if(sessionStorage.getItem('dw-nav')){sessionStorage.removeItem('dw-nav');h.classList.add('is-entering')}else if(!sessionStorage.getItem('dw-loaded')){h.classList.add('is-preloading')}}catch(e){}}(document);</script>
   <script src="assets/js/main.js" defer></script>
 </head>
@@ -95,7 +96,64 @@
         </div>
         <div class="svc__main">
           <p class="lead" data-reveal="up">Custom websites that are fast, intuitive and full of character — from strategy and wireframes to high-fidelity design, interaction and a smooth hand-off to development or a no-code build in Webflow or Framer.</p>
-          <div class="media" data-reveal="clip" data-parallax="0.06"><div class="ph ph--1" data-ph="Web Design — image / animation"></div></div>
+          <!-- Service animation (same scene as the homepage). To use your own video or Lottie, replace the .svc-anim__stage contents. -->
+          <div class="svc-anim" data-svc-anim>
+            <div class="media svc-anim__stage" data-reveal="clip" role="img" aria-label="Animation: a responsive website assembles itself, then a cursor clicks through it">
+<svg viewBox="0 0 480 360" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="wd-g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b4bff"/><stop offset="1" stop-color="#b9b3f5"/></linearGradient>
+    <linearGradient id="wd-g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ee6a44"/><stop offset="1" stop-color="#f1d86a"/></linearGradient>
+    <linearGradient id="wd-g3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e3b36"/><stop offset="1" stop-color="#8fb489"/></linearGradient>
+    <linearGradient id="wd-g4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2d2d2d"/><stop offset="1" stop-color="#6b6b6b"/></linearGradient>
+    <clipPath id="wd-clip"><path d="M41 61h398v252a12 12 0 0 1-12 12H53a12 12 0 0 1-12-12z"/></clipPath>
+    <clipPath id="wd-m1"><rect x="54" y="104" width="220" height="44"/></clipPath>
+    <clipPath id="wd-m2"><rect x="54" y="148" width="220" height="42"/></clipPath>
+  </defs>
+  <rect class="f-p1 s-l2" x="40.5" y="34.5" width="399" height="291" rx="12"/>
+  <path class="s-l1" d="M41 60.5h398"/>
+  <circle class="f-mu2" cx="58" cy="47.5" r="3.5"/><circle class="f-mu2" cx="70" cy="47.5" r="3.5"/><circle class="f-mu2" cx="82" cy="47.5" r="3.5"/>
+  <rect class="f-p3" x="176" y="41" width="128" height="13" rx="6.5"/>
+  <path class="s-mu f-no" stroke-width="1" d="M188 45.5v-1a2 2 0 0 1 4 0v1"/><rect class="f-mu" x="187" y="45.5" width="6" height="4.5" rx="1"/>
+  <text class="f-mu" x="198" y="50.2" font-size="6.5">yourwebsite.com</text>
+  <path class="s-mu2 f-no" stroke-width="1.2" stroke-linecap="round" d="M418 44.5h10M418 47.5h10M418 50.5h10"/>
+  <rect class="wd-load f-ac" x="41" y="59.5" width="398" height="1.5"/>
+  <g clip-path="url(#wd-clip)">
+    <g class="wd-content">
+      <g class="wd-page">
+        <rect class="wd-col0 f-ac" fill-opacity=".09" x="60" y="61" width="50" height="380"/><rect class="wd-col1 f-ac" fill-opacity=".09" x="122" y="61" width="50" height="380"/><rect class="wd-col2 f-ac" fill-opacity=".09" x="184" y="61" width="50" height="380"/><rect class="wd-col3 f-ac" fill-opacity=".09" x="246" y="61" width="50" height="380"/><rect class="wd-col4 f-ac" fill-opacity=".09" x="308" y="61" width="50" height="380"/><rect class="wd-col5 f-ac" fill-opacity=".09" x="370" y="61" width="50" height="380"/>
+        <circle class="wd-n0 f-ac" cx="66" cy="80" r="6"/>
+        <rect class="wd-n1 f-fg" x="77" y="77.5" width="36" height="5" rx="2.5"/>
+        <rect class="wd-n2 f-mu" x="262" y="78" width="22" height="4" rx="2"/>
+        <rect class="wd-n3 f-mu" x="292" y="78" width="26" height="4" rx="2"/>
+        <rect class="wd-n4 f-mu" x="326" y="78" width="20" height="4" rx="2"/>
+        <g class="wd-n5"><rect class="f-fg" x="362" y="71" width="58" height="18" rx="9"/><text class="f-bg" x="391" y="82.6" font-size="7" font-weight="500" text-anchor="middle">Let’s talk</text></g>
+        <g clip-path="url(#wd-m1)"><text class="wd-h1 f-fg" x="58" y="138" font-size="36" font-weight="500" letter-spacing="-1.8">Websites</text></g>
+        <g clip-path="url(#wd-m2)"><text class="wd-h2 f-fg" x="58" y="178" font-size="36" font-weight="500" letter-spacing="-1.8">that <tspan class="serif" font-weight="400" letter-spacing="-1">move.</tspan></text></g>
+        <rect class="wd-s1 f-mu" x="60" y="194" width="150" height="4" rx="2"/>
+        <rect class="wd-s2 f-mu" x="60" y="204" width="112" height="4" rx="2"/>
+        <g class="wd-cta"><rect class="f-ac" x="60" y="222" width="78" height="22" rx="11"/><text fill="#fff" x="99" y="235.8" font-size="7.5" font-weight="500" text-anchor="middle">Get started</text></g>
+        <g class="wd-cta2"><rect class="f-no s-l2" x="144.5" y="222.5" width="64" height="21" rx="10.5"/><text class="f-fg" x="176.5" y="235.8" font-size="7.5" text-anchor="middle">Our work</text></g>
+        <g class="wd-img">
+          <rect x="262" y="102" width="158" height="142" rx="10" fill="url(#wd-g1)"/>
+          <path class="wd-img-c f-no" stroke="#fff" stroke-opacity=".75" stroke-width="1.2" pathLength="1" d="M305 166a36 36 0 1 0 72 0a36 36 0 1 0 -72 0"/>
+          <path class="wd-img-w f-no" stroke="#fff" stroke-width="1.6" stroke-linecap="round" pathLength="1" d="M276 206c14-18 26-18 40 0s26 18 40 0 26-18 40 0"/>
+          <rect fill="#fff" fill-opacity=".9" x="274" y="114" width="30" height="4" rx="2"/>
+          <circle fill="#fff" cx="406" cy="116" r="3"/>
+        </g>
+        <text class="wd-tb f-mu" x="60" y="270" font-size="5.5" letter-spacing="1.4">TRUSTED BY</text>
+        <g class="wd-lg0"><circle class="f-mu2" cx="63" cy="283" r="3"/><rect class="f-mu2" x="70" y="280.5" width="30" height="5" rx="2.5"/></g><g class="wd-lg1"><circle class="f-mu2" cx="135" cy="283" r="3"/><rect class="f-mu2" x="142" y="280.5" width="36" height="5" rx="2.5"/></g><g class="wd-lg2"><circle class="f-mu2" cx="207" cy="283" r="3"/><rect class="f-mu2" x="214" y="280.5" width="42" height="5" rx="2.5"/></g><g class="wd-lg3"><circle class="f-mu2" cx="279" cy="283" r="3"/><rect class="f-mu2" x="286" y="280.5" width="30" height="5" rx="2.5"/></g><g class="wd-lg4"><circle class="f-mu2" cx="351" cy="283" r="3"/><rect class="f-mu2" x="358" y="280.5" width="36" height="5" rx="2.5"/></g>
+        <text class="wd-sec f-fg" x="60" y="318" font-size="16" font-weight="500" letter-spacing="-.6">Selected <tspan class="serif" font-weight="400">work</tspan></text>
+        <text class="wd-sec2 f-mu" x="420" y="318" font-size="7" text-anchor="end">View all →</text>
+        <g class="wd-c0"><rect x="60" y="332" width="113" height="84" rx="7" fill="url(#wd-g2)"/><rect class="f-fg" x="60" y="424" width="56" height="5" rx="2.5"/><rect class="f-mu" x="60" y="434" width="38" height="4" rx="2"/></g><g class="wd-c1"><rect x="183" y="332" width="113" height="84" rx="7" fill="url(#wd-g3)"/><rect class="wd-hov" fill="#fff" x="183" y="332" width="113" height="84" rx="7"/><rect class="f-fg" x="183" y="424" width="62" height="5" rx="2.5"/><rect class="f-mu" x="183" y="434" width="38" height="4" rx="2"/></g><g class="wd-c2"><rect x="306" y="332" width="113" height="84" rx="7" fill="url(#wd-g4)"/><rect class="f-fg" x="306" y="424" width="68" height="5" rx="2.5"/><rect class="f-mu" x="306" y="434" width="38" height="4" rx="2"/></g>
+      </g>
+    </g>
+  </g>
+  <circle class="wd-rip f-no" stroke="#fff" stroke-width="1.2" cx="99" cy="233" r="12"/>
+  <g class="wd-cur"><path d="M0 0v16.5l4.2-4 3 6.8 2.9-1.3-3-6.6h5.9z" fill="#fff" stroke="#131313" stroke-width="1" stroke-linejoin="round"/></g>
+</svg>
+            </div>
+            <p class="svc-anim__cap"><span><b>Fig. 01</b> A website, designed and assembled</span><span class="svc-anim__bar" aria-hidden="true"><i></i></span><span aria-hidden="true">10s loop</span></p>
+          </div>
           <ul class="svc__list" data-reveal="stagger"><li>Marketing websites</li><li>Landing pages</li><li>Portfolio & editorial sites</li><li>E-commerce design</li><li>Webflow / Framer builds</li><li>Interaction & micro-animation</li></ul>
         </div>
       </article>
@@ -107,7 +165,114 @@
         </div>
         <div class="svc__main">
           <p class="lead" data-reveal="up">Research-led product design for apps and platforms. I map the journeys, prototype the flows and design interfaces that make complex things feel simple.</p>
-          <div class="media" data-reveal="clip" data-parallax="0.06"><div class="ph ph--3" data-ph="UX / UI Design — image / animation"></div></div>
+          <!-- Service animation (same scene as the homepage). To use your own video or Lottie, replace the .svc-anim__stage contents. -->
+          <div class="svc-anim" data-svc-anim>
+            <div class="media svc-anim__stage" data-reveal="clip" role="img" aria-label="Animation: a user flow, a wireframe becoming a finished app screen, and a completed checkout">
+<svg viewBox="0 0 480 360" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="ux-g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1d86a"/><stop offset="1" stop-color="#ee6a44"/></linearGradient>
+    <linearGradient id="ux-scan" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a67ff" stop-opacity="0"/><stop offset="1" stop-color="#5a67ff" stop-opacity=".35"/></linearGradient>
+    <clipPath id="ux-scr"><rect x="297" y="33" width="136" height="294" rx="20"/></clipPath>
+  </defs>
+  <g class="ux-content">
+    <text class="f-mu" x="36" y="40" font-size="5.5" letter-spacing="1.5">USER FLOW — CHECKOUT</text>
+    <g class="ux-persona"><circle class="f-li" cx="176" cy="38" r="5"/><text class="f-mu" x="185" y="40" font-size="5.5">Persona · New visitor</text></g>
+    <path class="ux-c0 f-no s-l2" stroke-width="1.2" pathLength="1" d="M128 76C160 76 186 88 186 117"/>
+    <path class="ux-a0 f-no s-l2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" d="M182.5 113l3.5 4.5 3.5-4.5"/>
+    <path class="ux-c1 f-no s-l2" stroke-width="1.2" pathLength="1" d="M186 154C186 180 160 196 129 196"/>
+    <path class="ux-a1 f-no s-l2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" d="M133 192.5l-4.5 3.5 4.5 3.5"/>
+    <path class="ux-c2 f-no s-l2" stroke-width="1.2" pathLength="1" d="M82 214C82 244 104 256 139 256"/>
+    <path class="ux-a2 f-no s-l2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" d="M135 252.5l4.5 3.5-4.5 3.5"/>
+    <path class="ux-gc f-no s-mu2" stroke-dasharray="2 3" pathLength="1" d="M140 136H128"/>
+    <g class="ux-ghost"><rect class="f-no s-mu2" stroke-dasharray="3 3" x="36.5" y="118.5" width="92" height="36" rx="9"/><text class="f-mu" x="66" y="139" font-size="7">Search</text></g>
+    <g class="ux-nd0">
+        <rect class="f-p2 s-l2" x="36.5" y="58.5" width="92" height="36" rx="9"/>
+        <rect class="ux-act0 f-ac s-ac" fill-opacity=".1" stroke-width="1.2" x="36.5" y="58.5" width="92" height="36" rx="9"/>
+        <circle class="f-p3" cx="52" cy="76" r="8"/>
+        <circle class="f-ac" cx="52" cy="76" r="2.5"/>
+        <text class="f-fg" x="66" y="74" font-size="7.5" font-weight="500">Discover</text>
+        <text class="f-mu" x="66" y="84" font-size="5.5">Landing page</text>
+      </g><g class="ux-nd1">
+        <rect class="f-p2 s-l2" x="140.5" y="118.5" width="92" height="36" rx="9"/>
+        <rect class="ux-act1 f-ac s-ac" fill-opacity=".1" stroke-width="1.2" x="140.5" y="118.5" width="92" height="36" rx="9"/>
+        <circle class="f-p3" cx="156" cy="136" r="8"/>
+        <circle class="f-ac" cx="156" cy="136" r="2.5"/>
+        <text class="f-fg" x="170" y="134" font-size="7.5" font-weight="500">Browse</text>
+        <text class="f-mu" x="170" y="144" font-size="5.5">Catalogue</text>
+      </g><g class="ux-nd2">
+        <rect class="f-p2 s-l2" x="36.5" y="178.5" width="92" height="36" rx="9"/>
+        <rect class="ux-act2 f-ac s-ac" fill-opacity=".1" stroke-width="1.2" x="36.5" y="178.5" width="92" height="36" rx="9"/>
+        <circle class="f-p3" cx="52" cy="196" r="8"/>
+        <circle class="f-ac" cx="52" cy="196" r="2.5"/>
+        <text class="f-fg" x="66" y="194" font-size="7.5" font-weight="500">Product</text>
+        <text class="f-mu" x="66" y="204" font-size="5.5">Detail view</text>
+      </g><g class="ux-nd3">
+        <rect class="f-p2 s-l2" x="140.5" y="238.5" width="92" height="36" rx="9"/>
+        <rect class="ux-act3 f-ac s-ac" fill-opacity=".1" stroke-width="1.2" x="140.5" y="238.5" width="92" height="36" rx="9"/>
+        <circle class="f-p3" cx="156" cy="256" r="8"/>
+        <circle class="f-ac" cx="156" cy="256" r="2.5"/>
+        <text class="f-fg" x="170" y="254" font-size="7.5" font-weight="500">Checkout</text>
+        <text class="f-mu" x="170" y="264" font-size="5.5">Payment</text>
+      </g>
+    <g transform="rotate(-3 72 312)"><g class="ux-note"><rect x="34" y="292" width="80" height="40" rx="2" fill="#f1d86a"/><text x="42" y="306" font-size="6.5" font-weight="600" fill="#131313">Fewer steps,</text><text x="42" y="316" font-size="6.5" fill="#131313">happier users.</text><rect x="42" y="322" width="30" height="2" rx="1" fill="#131313" fill-opacity=".35"/></g></g>
+    <g class="ux-met"><text class="f-mu" x="140" y="300" font-size="5.5" letter-spacing="1.2">TASK SUCCESS</text><rect class="f-p3" x="140" y="308" width="96" height="4" rx="2"/></g>
+    <rect class="ux-bar f-ac" x="140" y="308" width="88" height="4" rx="2"/>
+    <text class="ux-val f-fg" x="236" y="300.5" font-size="8" font-weight="600" text-anchor="end">92%</text>
+  </g>
+
+  <rect class="f-p2 s-l2" x="290.5" y="26.5" width="149" height="307" rx="26"/>
+  <rect class="f-p3" x="440" y="92" width="2" height="26" rx="1"/>
+  <rect class="f-bg" x="297" y="33" width="136" height="294" rx="20"/>
+  <g clip-path="url(#ux-scr)">
+    <g class="ux-content">
+      <text class="f-fg" x="310" y="47" font-size="6" font-weight="600">9:41</text>
+      <rect class="f-fg" x="404" y="42.5" width="10" height="5" rx="1.5"/><rect class="f-fg" x="394" y="43.5" width="6" height="4" rx="1"/>
+      <g class="ux-wf0"><rect class="f-mu2" x="307" y="60" width="46" height="6" rx="2"/><circle class="f-no s-mu2" cx="417" cy="63" r="6"/></g>
+      <g class="ux-wf1"><rect class="f-no s-mu2" stroke-dasharray="3 3" x="307.5" y="76.5" width="115" height="77" rx="8"/><path class="s-mu2" d="M308 77L422 153M422 77L308 153"/></g>
+      <g class="ux-wf2"><rect class="f-mu2" x="307" y="164" width="80" height="7" rx="2"/><rect class="f-mu2" x="307" y="176" width="56" height="5" rx="2"/></g>
+      <g class="ux-wf3"><rect class="f-no s-mu2" stroke-dasharray="3 2" x="307.5" y="194.5" width="17" height="17" rx="4"/><rect class="f-mu2" x="331" y="198" width="60" height="4" rx="2"/><rect class="f-mu2" x="331" y="205" width="40" height="3" rx="1.5"/><rect class="f-no s-mu2" stroke-dasharray="3 2" x="307.5" y="218.5" width="17" height="17" rx="4"/><rect class="f-mu2" x="331" y="222" width="60" height="4" rx="2"/><rect class="f-mu2" x="331" y="229" width="40" height="3" rx="1.5"/><rect class="f-no s-mu2" stroke-dasharray="3 2" x="307.5" y="242.5" width="17" height="17" rx="4"/><rect class="f-mu2" x="331" y="246" width="60" height="4" rx="2"/><rect class="f-mu2" x="331" y="253" width="40" height="3" rx="1.5"/></g>
+      <g class="ux-wf4"><rect class="f-no s-mu2" stroke-dasharray="3 3" x="307.5" y="280.5" width="115" height="25" rx="12.5"/><rect class="f-mu2" x="345" y="291.5" width="40" height="3" rx="1.5"/></g>
+      <g class="ux-uiw">
+        <g class="ux-ui0"><text class="f-fg" x="307" y="67" font-size="12" font-weight="500" letter-spacing="-.4">Explore</text><circle class="f-li" cx="417" cy="63" r="6"/></g>
+        <g class="ux-ui1">
+          <rect x="307" y="76" width="116" height="78" rx="8" fill="url(#ux-g1)"/>
+          <ellipse cx="365" cy="143" rx="17" ry="2.6" fill="#000" fill-opacity=".16"/>
+          <path d="M357 97h16v4c0 4-3 5-3 9 0 3 8 6 8 17 0 9-6 13-13 13s-13-4-13-13c0-11 8-14 8-17 0-4-3-5-3-9z" fill="#efede8"/>
+          <path d="M359 118c4 2 8 2 12 0" fill="none" stroke="#ee6a44" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="412" cy="87" r="6" fill="#fff" fill-opacity=".92"/><path d="M412 90.2l-2.8-2.7a1.7 1.7 0 0 1 2.8-2 1.7 1.7 0 0 1 2.8 2z" fill="#ee6a44"/>
+        </g>
+        <g class="ux-ui2"><text class="f-fg" x="307" y="171" font-size="9.5" font-weight="500" letter-spacing="-.2">Ceramic Vase</text><text class="f-ac" x="423" y="171" font-size="9.5" font-weight="600" text-anchor="end">€48</text><rect class="f-mu2" x="307" y="178" width="70" height="3.5" rx="1.75"/></g>
+        <g class="ux-ui3"><rect x="307" y="194" width="18" height="18" rx="5" fill="#d9c7b0"/><text class="f-fg" x="331" y="202.5" font-size="7" font-weight="500">Sand</text><text class="f-mu" x="331" y="209.5" font-size="5.5">In stock</text><circle class="f-no s-l2" cx="417" cy="203" r="4.2"/><rect x="307" y="218" width="18" height="18" rx="5" fill="#ee6a44"/><text class="f-fg" x="331" y="226.5" font-size="7" font-weight="500">Clay</text><text class="f-mu" x="331" y="233.5" font-size="5.5">In stock</text><circle class="f-no s-ac" cx="417" cy="227" r="4.2"/><circle class="f-ac" cx="417" cy="227" r="2.2"/><rect x="307" y="242" width="18" height="18" rx="5" fill="#2a2a2a" stroke="rgba(239,237,232,.2)"/><text class="f-fg" x="331" y="250.5" font-size="7" font-weight="500">Ink</text><text class="f-mu" x="331" y="257.5" font-size="5.5">In stock</text><circle class="f-no s-l2" cx="417" cy="251" r="4.2"/></g>
+        <g class="ux-ui4"><rect class="f-ac" x="307" y="280" width="116" height="26" rx="13"/><text fill="#fff" x="365" y="295.8" font-size="8" font-weight="500" text-anchor="middle">Add to bag</text></g>
+      </g>
+      <g class="ux-done">
+        <text class="f-mu" x="307" y="66" font-size="6.5">‹  Confirmation</text>
+        <circle class="ux-okbg f-ac" fill-opacity=".14" cx="365" cy="134" r="28"/>
+        <path class="ux-okc f-no s-ac" stroke-width="1.6" pathLength="1" d="M337 134a28 28 0 1 0 56 0a28 28 0 1 0 -56 0"/>
+        <path class="ux-okm f-no s-ac" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" pathLength="1" d="M353 134l8 8 16-17"/>
+        <circle class="ux-p0" cx="365" cy="134" r="1.2" fill="#5a67ff"/><circle class="ux-p1" cx="365" cy="134" r="2.4" fill="#f1d86a"/><circle class="ux-p2" cx="365" cy="134" r="2.0" fill="#ee6a44"/><circle class="ux-p3" cx="365" cy="134" r="1.6" fill="#b9b3f5"/><circle class="ux-p4" cx="365" cy="134" r="1.2" fill="#5a67ff"/><circle class="ux-p5" cx="365" cy="134" r="2.4" fill="#f1d86a"/><circle class="ux-p6" cx="365" cy="134" r="2.0" fill="#ee6a44"/><circle class="ux-p7" cx="365" cy="134" r="1.6" fill="#b9b3f5"/>
+        <text class="ux-d0 f-fg" x="365" y="188" font-size="12" font-weight="500" text-anchor="middle" letter-spacing="-.3">Order placed</text>
+        <text class="ux-d1 f-mu" x="365" y="200" font-size="6.5" text-anchor="middle">Arriving in 2–3 days</text>
+        <g class="ux-d2"><rect class="f-p2" x="307" y="216" width="116" height="46" rx="8"/><rect x="316" y="229" width="20" height="20" rx="5" fill="#ee6a44"/><text class="f-fg" x="343" y="237" font-size="7" font-weight="500">Ceramic Vase</text><text class="f-mu" x="343" y="246" font-size="5.5">Clay · 1 item</text><text class="f-fg" x="414" y="237" font-size="7" font-weight="600" text-anchor="end">€48</text></g>
+        <g class="ux-d3"><rect class="f-no s-l2" x="307.5" y="280.5" width="115" height="25" rx="12.5"/><text class="f-fg" x="365" y="295.8" font-size="8" text-anchor="middle">Track order</text></g>
+      </g>
+      <g class="ux-scan"><rect x="297" y="3" width="136" height="30" fill="url(#ux-scan)"/><rect class="f-ac" x="297" y="32" width="136" height="1.5"/></g>
+      <circle class="ux-tap" fill="#fff" cx="365" cy="293" r="14"/>
+    </g>
+  </g>
+  <rect class="f-p2" x="345" y="39" width="40" height="10" rx="5"/>
+  <rect class="f-mu" x="345" y="319" width="40" height="3" rx="1.5"/>
+  <g class="ux-spec">
+    <rect class="f-no s-or" stroke-dasharray="3 2" x="304.5" y="277.5" width="121" height="31" rx="15.5"/>
+    <path class="s-or" stroke-width=".8" d="M307 271H423M307 267.5v7M423 267.5v7"/>
+    <rect class="f-or" x="352" y="265.5" width="26" height="11" rx="5.5"/><text fill="#fff" x="365" y="273.2" font-size="6" font-weight="600" text-anchor="middle">116</text>
+    <path class="s-or" stroke-width=".8" d="M283 260V280M280 260h6M280 280h6"/>
+    <rect class="f-or" x="262" y="264.5" width="18" height="11" rx="5.5"/><text fill="#fff" x="271" y="272.2" font-size="6" font-weight="600" text-anchor="middle">20</text>
+  </g>
+</svg>
+            </div>
+            <p class="svc-anim__cap"><span><b>Fig. 02</b> From user flow to tested interface</span><span class="svc-anim__bar" aria-hidden="true"><i></i></span><span aria-hidden="true">10s loop</span></p>
+          </div>
           <ul class="svc__list" data-reveal="stagger"><li>User research & interviews</li><li>Journeys & user flows</li><li>Wireframes & prototypes</li><li>App & dashboard UI</li><li>Usability testing</li><li>Design systems</li></ul>
         </div>
       </article>
@@ -119,7 +284,71 @@
         </div>
         <div class="svc__main">
           <p class="lead" data-reveal="up">Complete visual identities built on a clear strategy — typography, colour, imagery and tone of voice that work together across every touchpoint.</p>
-          <div class="media" data-reveal="clip" data-parallax="0.06"><div class="ph ph--2" data-ph="Brand Identity — image / animation"></div></div>
+          <!-- Service animation (same scene as the homepage). To use your own video or Lottie, replace the .svc-anim__stage contents. -->
+          <div class="svc-anim" data-svc-anim>
+            <div class="media svc-anim__stage" data-reveal="clip" role="img" aria-label="Animation: a brand identity system with logo, colours, type, pattern and applications">
+<svg viewBox="0 0 480 360" aria-hidden="true" focusable="false">
+  <defs><clipPath id="br-cc-129-100"><circle cx="129" cy="100" r="36"/></clipPath><clipPath id="br-cc-106-282"><circle cx="106" cy="282" r="8"/></clipPath><clipPath id="br-cc-296-272"><circle cx="296" cy="272" r="11"/></clipPath><clipPath id="br-cc-142-292"><circle cx="142" cy="292" r="9"/></clipPath>
+    <clipPath id="br-wm"><rect x="60" y="148" width="140" height="30"/></clipPath>
+    <clipPath id="br-aa"><rect x="250" y="150" width="96" height="50"/></clipPath>
+    <clipPath id="br-vc"><rect x="362" y="248" width="90" height="60"/></clipPath>
+  </defs>
+  <g class="br-root">
+    <g class="br-content">
+      <g class="br-t0"><rect class="f-p1 s-l1" x="24.5" y="24.5" width="209" height="189" rx="10"/><text class="f-mu" x="36" y="41" font-size="5.5" letter-spacing="1.5">LOGO</text></g><g class="br-t1"><rect class="f-p1 s-l1" x="246.5" y="24.5" width="209" height="89" rx="10"/><text class="f-mu" x="258" y="41" font-size="5.5" letter-spacing="1.5">COLOUR</text></g><g class="br-t2"><rect class="f-p1 s-l1" x="246.5" y="126.5" width="99" height="87" rx="10"/><text class="f-mu" x="258" y="143" font-size="5.5" letter-spacing="1.5">TYPE</text></g><g class="br-t3"><rect class="f-p1 s-l1" x="358.5" y="126.5" width="97" height="87" rx="10"/><text class="f-mu" x="370" y="143" font-size="5.5" letter-spacing="1.5">PATTERN</text></g><g class="br-t4"><rect class="f-p1 s-l1" x="24.5" y="226.5" width="209" height="109" rx="10"/><text class="f-mu" x="36" y="243" font-size="5.5" letter-spacing="1.5">STATIONERY</text></g><g class="br-t5"><rect class="f-p1 s-l1" x="246.5" y="226.5" width="99" height="109" rx="10"/><text class="f-mu" x="258" y="243" font-size="5.5" letter-spacing="1.5">APP ICON</text></g><g class="br-t6"><rect class="f-p1 s-l1" x="358.5" y="226.5" width="97" height="109" rx="10"/><text class="f-mu" x="370" y="243" font-size="5.5" letter-spacing="1.5">VOICE</text></g>
+      <g class="br-mk">
+        <path class="br-acc br-disc" d="M93 100a36 36 0 0 1 72 0z"/>
+        <g clip-path="url(#br-cc-129-100)">
+          <rect class="br-acc br-st0" x="93" y="104" width="72" height="6"/>
+          <rect class="br-acc br-st1" x="93" y="114" width="72" height="6"/>
+          <rect class="br-acc br-st2" x="93" y="124" width="72" height="5"/>
+        </g>
+      </g>
+      <g class="br-clear"><rect class="f-no s-mu" stroke-dasharray="2 2" x="85.5" y="56.5" width="87" height="87"/><text class="f-mu" x="176" y="60" font-size="5">x</text><text class="f-mu" x="80" y="150" font-size="5">x</text></g>
+      <g clip-path="url(#br-wm)"><text class="br-word f-fg" x="129" y="172" font-size="24" font-weight="600" letter-spacing="-1" text-anchor="middle">Lumen</text></g>
+      <text class="br-tag f-mu" x="129" y="190" font-size="5" letter-spacing="2" text-anchor="middle">DESIGN STUDIO — EST. 2026</text>
+
+      <rect class="br-sw0 br-acc" x="258" y="46" width="35" height="46" rx="5"/><rect class="br-sw1 f-fg" x="297" y="46" width="35" height="46" rx="5"/><text class="br-hx1 f-mu mono" x="297" y="104" font-size="5">#EFEDE8</text><rect class="br-sw2 f-bg s-l2" x="336" y="46" width="35" height="46" rx="5"/><text class="br-hx2 f-mu mono" x="336" y="104" font-size="5">#131313</text><rect class="br-sw3 f-ye" x="375" y="46" width="35" height="46" rx="5"/><text class="br-hx3 f-mu mono" x="375" y="104" font-size="5">#F1D86A</text><rect class="br-sw4 f-li" x="414" y="46" width="35" height="46" rx="5"/><text class="br-hx4 f-mu mono" x="414" y="104" font-size="5">#B9B3F5</text>
+      <text class="br-hx0a f-mu mono" x="258" y="104" font-size="5">#5A67FF</text>
+      <text class="br-hx0b f-mu mono" x="258" y="104" font-size="5">#EE6A44</text>
+      <text class="br-token f-ac mono" x="444" y="41" font-size="5" text-anchor="end">token · brand.primary</text>
+
+      <g clip-path="url(#br-aa)">
+        <text class="br-aa1 f-fg" x="258" y="192" font-size="42" font-weight="500" letter-spacing="-2">Aa</text>
+        <text class="br-aa2 f-fg serif" x="258" y="192" font-size="46" letter-spacing="-1">Aa</text>
+      </g>
+      <text class="br-tn1 f-mu" x="258" y="206" font-size="5">Inter Tight · 600</text>
+      <text class="br-tn2 f-mu" x="258" y="206" font-size="5">Instrument Serif · Italic</text>
+
+      <g transform="rotate(0 387.5 158.5)"><path class="br-pc0 br-acc" d="M378 168A19 19 0 0 1 397 149V168z"/></g><g transform="rotate(90 408.5 158.5)"><path class="br-pc1 f-fg" d="M399 168A19 19 0 0 1 418 149V168z"/></g><g transform="rotate(180 429.5 158.5)"><path class="br-pc2 f-ye" d="M420 168A19 19 0 0 1 439 149V168z"/></g><g transform="rotate(90 387.5 179.5)"><path class="br-pc3 f-fg" d="M378 189A19 19 0 0 1 397 170V189z"/></g><g transform="rotate(180 408.5 179.5)"><path class="br-pc4 br-acc" d="M399 189A19 19 0 0 1 418 170V189z"/></g><g transform="rotate(270 429.5 179.5)"><path class="br-pc5 f-fg" d="M420 189A19 19 0 0 1 439 170V189z"/></g><g transform="rotate(180 387.5 200.5)"><path class="br-pc6 f-ye" d="M378 210A19 19 0 0 1 397 191V210z"/></g><g transform="rotate(270 408.5 200.5)"><path class="br-pc7 f-fg" d="M399 210A19 19 0 0 1 418 191V210z"/></g><g transform="rotate(0 429.5 200.5)"><path class="br-pc8 br-acc" d="M420 210A19 19 0 0 1 439 191V210z"/></g>
+
+      <g transform="rotate(-8 118 285)"><g class="br-bc1"><rect class="br-acc" x="62" y="256" width="104" height="60" rx="4"/><rect fill="#fff" fill-opacity=".85" x="72" y="300" width="36" height="3" rx="1.5"/><rect fill="#fff" fill-opacity=".5" x="72" y="306" width="24" height="2.5" rx="1.25"/></g></g>
+      <g transform="rotate(5 142 292)"><g class="br-bc2">
+        <g class="br-f1"><rect class="f-fg" x="90" y="262" width="104" height="60" rx="4"/>
+          <path class="br-acc" d="M98 282a8 8 0 0 1 16 0z"/><g clip-path="url(#br-cc-106-282)"><rect class="br-acc" x="98" y="283" width="16" height="1.4"/><rect class="br-acc" x="98" y="285.3" width="16" height="1.4"/><rect class="br-acc" x="98" y="287.6" width="16" height="1.2"/></g>
+          <text x="98" y="306" font-size="7" font-weight="600" fill="#131313" letter-spacing="-.2">Lumen</text><rect x="98" y="310" width="42" height="2.4" rx="1.2" fill="#131313" fill-opacity=".45"/><rect x="150" y="306" width="36" height="2.4" rx="1.2" fill="#131313" fill-opacity=".45"/><rect x="150" y="310.5" width="28" height="2.4" rx="1.2" fill="#131313" fill-opacity=".45"/></g>
+        <g class="br-f2"><rect fill="#131313" stroke="rgba(239,237,232,.2)" x="90.5" y="262.5" width="103" height="59" rx="4"/>
+          <path class="br-acc" d="M133 292a9 9 0 0 1 18 0z"/><g clip-path="url(#br-cc-142-292)"><rect class="br-acc" x="133" y="293" width="18" height="1.6"/><rect class="br-acc" x="133" y="295.6" width="18" height="1.6"/><rect class="br-acc" x="133" y="298.2" width="18" height="1.4"/></g></g>
+      </g></g>
+
+      <g class="br-app"><rect class="br-acc" x="274" y="250" width="44" height="44" rx="12"/>
+        <path fill="#fff" d="M285 272a11 11 0 0 1 22 0z"/><g clip-path="url(#br-cc-296-272)"><rect fill="#fff" x="285" y="273.3" width="22" height="1.9"/><rect fill="#fff" x="285" y="276.4" width="22" height="1.9"/><rect fill="#fff" x="285" y="279.5" width="22" height="1.6"/></g></g>
+      <g class="br-badge"><circle class="f-fg" cx="316" cy="252" r="6"/><text fill="#131313" x="316" y="254.2" font-size="6" font-weight="700" text-anchor="middle">2</text></g>
+      <text class="br-appn f-fg" x="296" y="308" font-size="6.5" text-anchor="middle">Lumen</text>
+
+      <g clip-path="url(#br-vc)">
+        <text class="br-v0 f-fg serif" x="370" y="266" font-size="14">Warm.</text>
+        <text class="br-v1 f-fg serif" x="370" y="284" font-size="14">Clear.</text>
+        <text class="br-v2 f-fg serif" x="370" y="302" font-size="14">Bold.</text>
+      </g>
+      <path class="br-vr f-no s-l2" pathLength="1" d="M370 314.5H444"/>
+      <text class="br-vt f-mu" x="370" y="325" font-size="5">Tone of voice</text>
+    </g>
+  </g>
+</svg>
+            </div>
+            <p class="svc-anim__cap"><span><b>Fig. 03</b> One identity, every touchpoint</span><span class="svc-anim__bar" aria-hidden="true"><i></i></span><span aria-hidden="true">10s loop</span></p>
+          </div>
           <ul class="svc__list" data-reveal="stagger"><li>Brand strategy & positioning</li><li>Visual identity systems</li><li>Typography & colour</li><li>Brand guidelines</li><li>Stationery & collateral</li><li>Brand refreshes</li></ul>
         </div>
       </article>
@@ -131,7 +360,50 @@
         </div>
         <div class="svc__main">
           <p class="lead" data-reveal="up">Distinctive, timeless marks that scale from favicon to billboard — delivered with responsive variations, clear usage rules and every file format you need.</p>
-          <div class="media" data-reveal="clip" data-parallax="0.06"><div class="ph ph--6" data-ph="Logo Design — image / animation"></div></div>
+          <!-- Service animation (same scene as the homepage). To use your own video or Lottie, replace the .svc-anim__stage contents. -->
+          <div class="svc-anim" data-svc-anim>
+            <div class="media svc-anim__stage" data-reveal="clip" role="img" aria-label="Animation: a logomark constructed on a geometric grid and drawn with the pen tool">
+<svg viewBox="0 0 480 360" aria-hidden="true" focusable="false">
+  <g class="lg-content">
+    <g class="lg-hud"><text class="f-mu" x="24" y="30" font-size="5.5" letter-spacing="1.5">CONSTRUCTION GRID</text><text class="f-mu mono" x="456" y="30" font-size="5.5" text-anchor="end">1 : 1.618 · 140 × 140 u</text></g>
+    <path class="lg-grid s-l1 f-no" stroke-width=".5" d="M150 48V228M150 48H330M165 48V228M150 63H330M180 48V228M150 78H330M195 48V228M150 93H330M210 48V228M150 108H330M225 48V228M150 123H330M240 48V228M150 138H330M255 48V228M150 153H330M270 48V228M150 168H330M285 48V228M150 183H330M300 48V228M150 198H330M315 48V228M150 213H330M330 48V228M150 228H330"/>
+    <g class="lg-cons">
+      <path class="lg-sq f-no s-l2" pathLength="1" d="M170 68h140v140h-140z"/>
+      <path class="lg-cx f-no s-l2" pathLength="1" d="M150 138H330"/>
+      <path class="lg-cy f-no s-l2" pathLength="1" d="M240 48V228"/>
+      <path class="lg-d1 f-no s-l1" pathLength="1" d="M170 68L310 208"/>
+      <path class="lg-d2 f-no s-l1" pathLength="1" d="M310 68L170 208"/>
+      <path class="lg-cR f-no s-ac" stroke-width="1" pathLength="1" d="M170 138a70 70 0 1 0 140 0a70 70 0 1 0 -140 0"/>
+      <path class="lg-cl f-no s-ac" stroke-width="1" pathLength="1" d="M170 138a35 35 0 1 0 70 0a35 35 0 1 0 -70 0"/>
+      <path class="lg-cr f-no s-ac" stroke-width="1" pathLength="1" d="M240 138a35 35 0 1 0 70 0a35 35 0 1 0 -70 0"/>
+      <circle class="lg-phi f-no s-mu" stroke-dasharray="2 3" cx="240" cy="138" r="43.3"/>
+      <g class="lg-small"><circle class="f-no s-l2" cx="205" cy="138" r="21.6"/><circle class="f-no s-l2" cx="275" cy="138" r="21.6"/></g>
+      <circle class="lg-sunc f-no s-mu" stroke-dasharray="2 2" cx="275" cy="103" r="13"/>
+      <circle class="lg-dot0 f-fg" cx="170" cy="138" r="2.2"/><circle class="lg-dot1 f-fg" cx="240" cy="138" r="2.2"/><circle class="lg-dot2 f-fg" cx="310" cy="138" r="2.2"/><circle class="lg-dot3 f-fg" cx="240" cy="68" r="2.2"/><circle class="lg-dot4 f-fg" cx="240" cy="208" r="2.2"/><circle class="lg-dot5 f-fg" cx="205" cy="103" r="2.2"/><circle class="lg-dot6 f-fg" cx="275" cy="173" r="2.2"/>
+    </g>
+    <g class="lg-ann">
+      <g class="lg-dim"><path class="s-mu f-no" stroke-width=".7" d="M170 58H310M170 55v6M310 55v6"/><rect class="f-bg" x="230" y="54" width="20" height="8"/><text class="f-mu mono" x="240" y="60" font-size="5.5" text-anchor="middle">140</text></g>
+      <text class="lg-a1 f-ac mono" x="292" y="86" font-size="5.5">R = 70</text>
+      <text class="lg-a2 f-ac mono" x="174" y="168" font-size="5.5">r = R / 2</text>
+      <text class="lg-a3 f-mu mono" x="258" y="198" font-size="5.5">φ = 1.618</text>
+    </g>
+    <path class="lg-mf f-fg" d="M170 138A35 35 0 0 1 240 138A35 35 0 0 0 310 138A70 70 0 0 1 170 138Z"/>
+    <circle class="lg-sun f-ac" cx="275" cy="103" r="13"/>
+    <path class="lg-ms f-no s-ac" stroke-width="1.6" stroke-linejoin="round" pathLength="1" d="M170 138A35 35 0 0 1 240 138A35 35 0 0 0 310 138A70 70 0 0 1 170 138Z"/>
+    <g class="lg-pen"><path class="f-no s-ac" stroke-width=".7" d="M185.7 103H224.3M255.7 173H294.3M201.3 208H278.7M170 118.7V176.7M240 118.7V157.3M310 138V176.7"/><circle class="f-ac" cx="185.7" cy="103" r="1.7"/><circle class="f-ac" cx="224.3" cy="103" r="1.7"/><circle class="f-ac" cx="255.7" cy="173" r="1.7"/><circle class="f-ac" cx="294.3" cy="173" r="1.7"/><circle class="f-ac" cx="201.3" cy="208" r="1.7"/><circle class="f-ac" cx="278.7" cy="208" r="1.7"/><circle class="f-ac" cx="170" cy="118.7" r="1.7"/><circle class="f-ac" cx="170" cy="176.7" r="1.7"/><circle class="f-ac" cx="240" cy="118.7" r="1.7"/><circle class="f-ac" cx="240" cy="157.3" r="1.7"/><circle class="f-ac" cx="310" cy="176.7" r="1.7"/><rect class="f-bg s-ac" stroke-width="1" x="167.5" y="135.5" width="5" height="5"/><rect class="f-bg s-ac" stroke-width="1" x="202.5" y="100.5" width="5" height="5"/><rect class="f-bg s-ac" stroke-width="1" x="237.5" y="135.5" width="5" height="5"/><rect class="f-bg s-ac" stroke-width="1" x="272.5" y="170.5" width="5" height="5"/><rect class="f-bg s-ac" stroke-width="1" x="307.5" y="135.5" width="5" height="5"/><rect class="f-bg s-ac" stroke-width="1" x="237.5" y="205.5" width="5" height="5"/></g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;.375;.385;.56;.575;1"/>
+      <animateMotion dur="10s" repeatCount="indefinite" path="M170 138A35 35 0 0 1 240 138A35 35 0 0 0 310 138A70 70 0 0 1 170 138Z" keyPoints="0;0;1;1" keyTimes="0;.38;.56;1" calcMode="linear"/>
+      <path d="M0 0L2.5-8 10-15.5 15.5-10 8-2.5z" fill="#efede8" stroke="#131313" stroke-width=".8" stroke-linejoin="round"/><path d="M0 0L6.2-6.2" stroke="#131313" stroke-width=".8"/><circle cx="6.8" cy="-6.8" r="1.3" fill="#131313"/>
+    </g>
+    <circle class="lg-pulse f-no s-ac" stroke-width="1" cx="275" cy="103" r="13"/>
+    <text class="lg-word f-fg" x="240" y="262" font-size="24" font-weight="500" letter-spacing="-0.8" text-anchor="middle">Halcyon</text>
+    <text class="lg-cap f-mu" x="240" y="282" font-size="5.5" letter-spacing="2" text-anchor="middle">PRIMARY MARK — V.03</text>
+  </g>
+</svg>
+            </div>
+            <p class="svc-anim__cap"><span><b>Fig. 04</b> A mark, built on geometry</span><span class="svc-anim__bar" aria-hidden="true"><i></i></span><span aria-hidden="true">10s loop</span></p>
+          </div>
           <ul class="svc__list" data-reveal="stagger"><li>Logomarks & symbols</li><li>Wordmarks</li><li>Monograms</li><li>Responsive logo systems</li><li>Logo animation</li><li>Usage guidelines</li></ul>
         </div>
       </article>
@@ -143,7 +415,119 @@
         </div>
         <div class="svc__main">
           <p class="lead" data-reveal="up">Motion that gives brands and interfaces a pulse — animated logos, UI micro-interactions, social content, explainers and showreels.</p>
-          <div class="media" data-reveal="clip" data-parallax="0.06"><div class="ph ph--5" data-ph="Motion Graphics — image / animation"></div></div>
+          <!-- Service animation (same scene as the homepage). To use your own video or Lottie, replace the .svc-anim__stage contents. -->
+          <div class="svc-anim" data-svc-anim data-still="6.4">
+            <div class="media svc-anim__stage" data-reveal="clip" role="img" aria-label="Animation: a shape travels a motion path, morphing between keyframes on a live timeline">
+<svg viewBox="0 0 480 360" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="mo-blur" x="-1" y="-1" width="3" height="3"><feGaussianBlur stdDeviation="7"/></filter>
+    <clipPath id="mo-type"><rect x="346" y="168" width="104" height="28"/></clipPath>
+  </defs>
+  <rect fill="#0d0d0d" class="s-l2" x="20.5" y="16.5" width="439" height="200" rx="8"/>
+  <path class="s-l1" d="M21 34.5H459"/>
+  <text class="f-mu mono" x="30" y="28" font-size="5.5">COMP_01 · 1920 × 1080 · 24 fps</text>
+  <circle class="mo-rec f-or" cx="397" cy="25.5" r="2.4"/>
+  <text class="f-fg mono" x="450" y="28" font-size="6.5" text-anchor="end" data-timecode>00:00:00:00</text>
+  <path class="s-l2 f-no" stroke-width="1" d="M30 50v-8h8M322 42h8v8M30 200v8h8M322 208h8v-8"/>
+  <path class="f-no s-mu2" stroke-width="1" stroke-dasharray="2 4" d="M62,178 C80,120 110,78 160,78 C205,78 215,172 250,172 C282,172 295,110 318,92"/>
+  <path class="f-no s-ac" stroke-width="1.6" stroke-linecap="round" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1" d="M62,178 C80,120 110,78 160,78 C205,78 215,172 250,172 C282,172 295,110 318,92" opacity=".7">
+    <animate attributeName="stroke-dashoffset" dur="10s" repeatCount="indefinite"  values="1;1;0.6192;0.6192;0.2744;0.2744;0;0" keyTimes="0;.05;.28;.36;.56;.64;.82;1" calcMode="spline" keySplines="0 0 1 1;.65 0 .35 1;0 0 1 1;.65 0 .35 1;0 0 1 1;.65 0 .35 1;0 0 1 1"/>
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite"  values=".7;.7;0;0" keyTimes="0;.9;.95;1"/>
+  </path>
+  <path class="s-l2 f-no" stroke-width=".6" d="M110 78H205M215 172H282"/>
+  <circle class="f-bg s-l2" cx="110" cy="78" r="1.8"/><circle class="f-bg s-l2" cx="205" cy="78" r="1.8"/><circle class="f-bg s-l2" cx="215" cy="172" r="1.8"/><circle class="f-bg s-l2" cx="282" cy="172" r="1.8"/>
+  <path class="f-bg s-mu" stroke-width="1" d="M62 174l4 4-4 4-4-4z"/><text class="f-mu mono" x="62" y="170" font-size="4.8" text-anchor="middle">K1</text><path class="f-bg s-mu" stroke-width="1" d="M160 74l4 4-4 4-4-4z"/><text class="f-mu mono" x="160" y="70" font-size="4.8" text-anchor="middle">K2</text><path class="f-bg s-mu" stroke-width="1" d="M250 168l4 4-4 4-4-4z"/><text class="f-mu mono" x="250" y="164" font-size="4.8" text-anchor="middle">K3</text><path class="f-bg s-mu" stroke-width="1" d="M318 88l4 4-4 4-4-4z"/><text class="f-mu mono" x="318" y="84" font-size="4.8" text-anchor="middle">K4</text>
+  <circle class="mo-r1 f-no" stroke="#efede8" stroke-width="1" cx="160" cy="78" r="26"/><circle class="mo-r2 f-no" stroke="#efede8" stroke-width="1" cx="250" cy="172" r="26"/><circle class="mo-r3 f-no" stroke="#efede8" stroke-width="1" cx="318" cy="92" r="26"/>
+  <circle class="mo-p0" cx="250" cy="172" r="1.2" fill="#5a67ff"/><circle class="mo-p1" cx="250" cy="172" r="2.4" fill="#ee6a44"/><circle class="mo-p2" cx="250" cy="172" r="2.0" fill="#f1d86a"/><circle class="mo-p3" cx="250" cy="172" r="1.6" fill="#efede8"/><circle class="mo-p4" cx="250" cy="172" r="1.2" fill="#b9b3f5"/><circle class="mo-p5" cx="250" cy="172" r="2.4" fill="#5a67ff"/><circle class="mo-p6" cx="250" cy="172" r="2.0" fill="#ee6a44"/><circle class="mo-p7" cx="250" cy="172" r="1.6" fill="#f1d86a"/><circle class="mo-p8" cx="250" cy="172" r="1.2" fill="#efede8"/><circle class="mo-p9" cx="250" cy="172" r="2.4" fill="#b9b3f5"/><circle class="mo-p10" cx="250" cy="172" r="2.0" fill="#5a67ff"/><circle class="mo-p11" cx="250" cy="172" r="1.6" fill="#ee6a44"/>
+  <g opacity=".1"><g opacity="0">
+        <animate attributeName="opacity" dur="10s" repeatCount="indefinite" begin="0.21s" values="0;1;1;0;0" keyTimes="0;.04;.9;.95;1"/>
+        <animateMotion dur="10s" repeatCount="indefinite" begin="0.21s" path="M62,178 C80,120 110,78 160,78 C205,78 215,172 250,172 C282,172 295,110 318,92" keyPoints="0;0;0.3808;0.3808;0.7256;0.7256;1;1" keyTimes="0;.05;.28;.36;.56;.64;.82;1" calcMode="spline" keySplines="0 0 1 1;.65 0 .35 1;0 0 1 1;.65 0 .35 1;0 0 1 1;.65 0 .35 1;0 0 1 1"/>
+        <g>
+          <animateTransform attributeName="transform" type="scale" dur="10s" repeatCount="indefinite" begin="0.21s" values=".01 .01;1 1;.92 1.1;1.2 .82;.95 1.05;1 1;.92 1.1;1.2 .82;.95 1.05;1 1;.92 1.1;1.2 .82;.95 1.05;1 1;1 1;.01 .01;.01 .01" keyTimes="0;.04;.16;.28;.31;.34;.46;.56;.59;.62;.73;.82;.85;.88;.9;.95;1"/>
+          
+          <path d="M-16.97,-16.97C-7.59,-26.34 7.59,-26.34 16.97,-16.97C26.34,-7.59 26.34,7.59 16.97,16.97C7.59,26.34 -7.59,26.34 -16.97,16.97C-26.34,7.59 -26.34,-7.59 -16.97,-16.97Z" fill="#5a67ff">
+            <animate attributeName="d" dur="10s" repeatCount="indefinite" begin="0.21s" values="M-16.97,-16.97C-7.59,-26.34 7.59,-26.34 16.97,-16.97C26.34,-7.59 26.34,7.59 16.97,16.97C7.59,26.34 -7.59,26.34 -16.97,16.97C-26.34,7.59 -26.34,-7.59 -16.97,-16.97Z;M-16.97,-16.97C-7.59,-26.34 7.59,-26.34 16.97,-16.97C26.34,-7.59 26.34,7.59 16.97,16.97C7.59,26.34 -7.59,26.34 -16.97,16.97C-26.34,7.59 -26.34,-7.59 -16.97,-16.97Z;M-20,-20C-7,-20 7,-20 20,-20C20,-7 20,7 20,20C7,20 -7,20 -20,20C-20,7 -20,-7 -20,-20Z;M-20,-20C-7,-20 7,-20 20,-20C20,-7 20,7 20,20C7,20 -7,20 -20,20C-20,7 -20,-7 -20,-20Z;M-24,-24C-6,-9 6,-9 24,-24C9,-6 9,6 24,24C6,9 -6,9 -24,24C-9,6 -9,-6 -24,-24Z;M-24,-24C-6,-9 6,-9 24,-24C9,-6 9,6 24,24C6,9 -6,9 -24,24C-9,6 -9,-6 -24,-24Z;M-16.97,-16.97C-7.59,-26.34 7.59,-26.34 16.97,-16.97C26.34,-7.59 26.34,7.59 16.97,16.97C7.59,26.34 -7.59,26.34 -16.97,16.97C-26.34,7.59 -26.34,-7.59 -16.97,-16.97Z;M-16.97,-16.97C-7.59,-26.34 7.59,-26.34 16.97,-16.97C26.34,-7.59 26.34,7.59 16.97,16.97C7.59,26.34 -7.59,26.34 -16.97,16.97C-26.34,7.59 -26.34,-7.59 -16.97,-16.97Z" keyTimes="0;.30;.35;.58;.63;.84;.89;1" calcMode="spline" keySplines="0 0 1 1;.6 0 .2 1;0 0 1 1;.6 0 .2 1;0 0 1 1;.6 0 .2 1;0 0 1 1"/>
+            <animate attributeName="fill" dur="10s" repeatCount="indefinite" begin="0.21s" values="#5a67ff;#5a67ff;#ee6a44;#ee6a44;#f1d86a;#f1d86a;#5a67ff;#5a67ff" keyTimes="0;.30;.35;.58;.63;.84;.89;1"/>
+            <animateTransform attributeName="transform" type="rotate" dur="10s" repeatCount="indefinite" begin="0.21s" values="0;0;90;90;180;180;270;270" keyTimes="0;.05;.28;.36;.56;.64;.82;1" calcMode="spline" keySplines="0 0 1 1;.65 0 .35 1;0 0 1 1;.65 0 .35 1;0 0 1 1;.65 0 .35 1;0 0 1 1"/>
+          </path>
+        </g>
+      </g></g>
+  <g opacity=".2"><g opacity="0">
+        <animate attributeName="opacity" dur="10s" repeatCount="indefinite" begin="0.14s" values="0;1;1;0;0" keyTimes="0;.04;.9;.95;1"/>
+        <animateMotion dur="10s" repeatCount="indefinite" begin="0.14s" path="M62,178 C80,120 110,78 160,78 C205,78 215,172 250,172 C282,172 295,110 318,92" keyPoints="0;0;0.3808;0.3808;0.7256;0.7256;1;1" keyTimes="0;.05;.28;.36;.56;.64;.82;1" calcMode="spline" keySplines="0 0 1 1;.65 0 .35 1;0 0 1 1;.65 0 .35 1;0 0 1 1;.65 0 .35 1;0 0 1 1"/>
+        <g>
+          <animateTransform attributeName="transform" type="scale" dur="10s" repeatCount="indefinite" begin="0.14s" values=".01 .01;1 1;.92 1.1;1.2 .82;.95 1.05;1 1;.92 1.1;1.2 .82;.95 1.05;1 1;.92 1.1;1.2 .82;.95 1.05;1 1;1 1;.01 .01;.01 .01" keyTimes="0;.04;.16;.28;.31;.34;.46;.56;.59;.62;.73;.82;.85;.88;.9;.95;1"/>
+          
+          <path d="M-16.97,-16.97C-7.59,-26.34 7.59,-26.34 16.97,-16.97C26.34,-7.59 26.34,7.59 16.97,16.97C7.59,26.34 -7.59,26.34 -16.97,16.97C-26.34,7.59 -26.34,-7.59 -16.97,-16.97Z" fill="#5a67ff">
+            <animate attributeName="d" dur="10s" repeatCount="indefinite" begin="0.14s" values="M-16.97,-16.97C-7.59,-26.34 7.59,-26.34 16.97,-16.97C26.34,-7.59 26.34,7.59 16.97,16.97C7.59,26.34 -7.59,26.34 -16.97,16.97C-26.34,7.59 -26.34,-7.59 -16.97,-16.97Z;M-16.97,-16.97C-7.59,-26.34 7.59,-26.34 16.97,-16.97C26.34,-7.59 26.34,7.59 16.97,16.97C7.59,26.34 -7.59,26.34 -16.97,16.97C-26.34,7.59 -26.34,-7.59 -16.97,-16.97Z;M-20,-20C-7,-20 7,-20 20,-20C20,-7 20,7 20,20C7,20 -7,20 -20,20C-20,7 -20,-7 -20,-20Z;M-20,-20C-7,-20 7,-20 20,-20C20,-7 20,7 20,20C7,20 -7,20 -20,20C-20,7 -20,-7 -20,-20Z;M-24,-24C-6,-9 6,-9 24,-24C9,-6 9,6 24,24C6,9 -6,9 -24,24C-9,6 -9,-6 -24,-24Z;M-24,-24C-6,-9 6,-9 24,-24C9,-6 9,6 24,24C6,9 -6,9 -24,24C-9,6 -9,-6 -24,-24Z;M-16.97,-16.97C-7.59,-26.34 7.59,-26.34 16.97,-16.97C26.34,-7.59 26.34,7.59 16.97,16.97C7.59,26.34 -7.59,26.34 -16.97,16.97C-26.34,7.59 -26.34,-7.59 -16.97,-16.97Z;M-16.97,-16.97C-7.59,-26.34 7.59,-26.34 16.97,-16.97C26.34,-7.59 26.34,7.59 16.97,16.97C7.59,26.34 -7.59,26.34 -16.97,16.97C-26.34,7.59 -26.34,-7.59 -16.97,-16.97Z" keyTimes="0;.30;.35;.58;.63;.84;.89;1" calcMode="spline" keySplines="0 0 1 1;.6 0 .2 1;0 0 1 1;.6 0 .2 1;0 0 1 1;.6 0 .2 1;0 0 1 1"/>
+            <animate attributeName="fill" dur="10s" repeatCount="indefinite" begin="0.14s" values="#5a67ff;#5a67ff;#ee6a44;#ee6a44;#f1d86a;#f1d86a;#5a67ff;#5a67ff" keyTimes="0;.30;.35;.58;.63;.84;.89;1"/>
+            <animateTransform attributeName="transform" type="rotate" dur="10s" repeatCount="indefinite" begin="0.14s" values="0;0;90;90;180;180;270;270" keyTimes="0;.05;.28;.36;.56;.64;.82;1" calcMode="spline" keySplines="0 0 1 1;.65 0 .35 1;0 0 1 1;.65 0 .35 1;0 0 1 1;.65 0 .35 1;0 0 1 1"/>
+          </path>
+        </g>
+      </g></g>
+  <g opacity=".38"><g opacity="0">
+        <animate attributeName="opacity" dur="10s" repeatCount="indefinite" begin="0.07s" values="0;1;1;0;0" keyTimes="0;.04;.9;.95;1"/>
+        <animateMotion dur="10s" repeatCount="indefinite" begin="0.07s" path="M62,178 C80,120 110,78 160,78 C205,78 215,172 250,172 C282,172 295,110 318,92" keyPoints="0;0;0.3808;0.3808;0.7256;0.7256;1;1" keyTimes="0;.05;.28;.36;.56;.64;.82;1" calcMode="spline" keySplines="0 0 1 1;.65 0 .35 1;0 0 1 1;.65 0 .35 1;0 0 1 1;.65 0 .35 1;0 0 1 1"/>
+        <g>
+          <animateTransform attributeName="transform" type="scale" dur="10s" repeatCount="indefinite" begin="0.07s" values=".01 .01;1 1;.92 1.1;1.2 .82;.95 1.05;1 1;.92 1.1;1.2 .82;.95 1.05;1 1;.92 1.1;1.2 .82;.95 1.05;1 1;1 1;.01 .01;.01 .01" keyTimes="0;.04;.16;.28;.31;.34;.46;.56;.59;.62;.73;.82;.85;.88;.9;.95;1"/>
+          
+          <path d="M-16.97,-16.97C-7.59,-26.34 7.59,-26.34 16.97,-16.97C26.34,-7.59 26.34,7.59 16.97,16.97C7.59,26.34 -7.59,26.34 -16.97,16.97C-26.34,7.59 -26.34,-7.59 -16.97,-16.97Z" fill="#5a67ff">
+            <animate attributeName="d" dur="10s" repeatCount="indefinite" begin="0.07s" values="M-16.97,-16.97C-7.59,-26.34 7.59,-26.34 16.97,-16.97C26.34,-7.59 26.34,7.59 16.97,16.97C7.59,26.34 -7.59,26.34 -16.97,16.97C-26.34,7.59 -26.34,-7.59 -16.97,-16.97Z;M-16.97,-16.97C-7.59,-26.34 7.59,-26.34 16.97,-16.97C26.34,-7.59 26.34,7.59 16.97,16.97C7.59,26.34 -7.59,26.34 -16.97,16.97C-26.34,7.59 -26.34,-7.59 -16.97,-16.97Z;M-20,-20C-7,-20 7,-20 20,-20C20,-7 20,7 20,20C7,20 -7,20 -20,20C-20,7 -20,-7 -20,-20Z;M-20,-20C-7,-20 7,-20 20,-20C20,-7 20,7 20,20C7,20 -7,20 -20,20C-20,7 -20,-7 -20,-20Z;M-24,-24C-6,-9 6,-9 24,-24C9,-6 9,6 24,24C6,9 -6,9 -24,24C-9,6 -9,-6 -24,-24Z;M-24,-24C-6,-9 6,-9 24,-24C9,-6 9,6 24,24C6,9 -6,9 -24,24C-9,6 -9,-6 -24,-24Z;M-16.97,-16.97C-7.59,-26.34 7.59,-26.34 16.97,-16.97C26.34,-7.59 26.34,7.59 16.97,16.97C7.59,26.34 -7.59,26.34 -16.97,16.97C-26.34,7.59 -26.34,-7.59 -16.97,-16.97Z;M-16.97,-16.97C-7.59,-26.34 7.59,-26.34 16.97,-16.97C26.34,-7.59 26.34,7.59 16.97,16.97C7.59,26.34 -7.59,26.34 -16.97,16.97C-26.34,7.59 -26.34,-7.59 -16.97,-16.97Z" keyTimes="0;.30;.35;.58;.63;.84;.89;1" calcMode="spline" keySplines="0 0 1 1;.6 0 .2 1;0 0 1 1;.6 0 .2 1;0 0 1 1;.6 0 .2 1;0 0 1 1"/>
+            <animate attributeName="fill" dur="10s" repeatCount="indefinite" begin="0.07s" values="#5a67ff;#5a67ff;#ee6a44;#ee6a44;#f1d86a;#f1d86a;#5a67ff;#5a67ff" keyTimes="0;.30;.35;.58;.63;.84;.89;1"/>
+            <animateTransform attributeName="transform" type="rotate" dur="10s" repeatCount="indefinite" begin="0.07s" values="0;0;90;90;180;180;270;270" keyTimes="0;.05;.28;.36;.56;.64;.82;1" calcMode="spline" keySplines="0 0 1 1;.65 0 .35 1;0 0 1 1;.65 0 .35 1;0 0 1 1;.65 0 .35 1;0 0 1 1"/>
+          </path>
+        </g>
+      </g></g>
+  <g opacity="0">
+        <animate attributeName="opacity" dur="10s" repeatCount="indefinite"  values="0;1;1;0;0" keyTimes="0;.04;.9;.95;1"/>
+        <animateMotion dur="10s" repeatCount="indefinite"  path="M62,178 C80,120 110,78 160,78 C205,78 215,172 250,172 C282,172 295,110 318,92" keyPoints="0;0;0.3808;0.3808;0.7256;0.7256;1;1" keyTimes="0;.05;.28;.36;.56;.64;.82;1" calcMode="spline" keySplines="0 0 1 1;.65 0 .35 1;0 0 1 1;.65 0 .35 1;0 0 1 1;.65 0 .35 1;0 0 1 1"/>
+        <g>
+          <animateTransform attributeName="transform" type="scale" dur="10s" repeatCount="indefinite"  values=".01 .01;1 1;.92 1.1;1.2 .82;.95 1.05;1 1;.92 1.1;1.2 .82;.95 1.05;1 1;.92 1.1;1.2 .82;.95 1.05;1 1;1 1;.01 .01;.01 .01" keyTimes="0;.04;.16;.28;.31;.34;.46;.56;.59;.62;.73;.82;.85;.88;.9;.95;1"/>
+          <circle r="22" fill="#5a67ff" filter="url(#mo-blur)" opacity=".55"><animate attributeName="fill" dur="10s" repeatCount="indefinite"  values="#5a67ff;#5a67ff;#ee6a44;#ee6a44;#f1d86a;#f1d86a;#5a67ff;#5a67ff" keyTimes="0;.30;.35;.58;.63;.84;.89;1"/></circle>
+          <path d="M-16.97,-16.97C-7.59,-26.34 7.59,-26.34 16.97,-16.97C26.34,-7.59 26.34,7.59 16.97,16.97C7.59,26.34 -7.59,26.34 -16.97,16.97C-26.34,7.59 -26.34,-7.59 -16.97,-16.97Z" fill="#5a67ff">
+            <animate attributeName="d" dur="10s" repeatCount="indefinite"  values="M-16.97,-16.97C-7.59,-26.34 7.59,-26.34 16.97,-16.97C26.34,-7.59 26.34,7.59 16.97,16.97C7.59,26.34 -7.59,26.34 -16.97,16.97C-26.34,7.59 -26.34,-7.59 -16.97,-16.97Z;M-16.97,-16.97C-7.59,-26.34 7.59,-26.34 16.97,-16.97C26.34,-7.59 26.34,7.59 16.97,16.97C7.59,26.34 -7.59,26.34 -16.97,16.97C-26.34,7.59 -26.34,-7.59 -16.97,-16.97Z;M-20,-20C-7,-20 7,-20 20,-20C20,-7 20,7 20,20C7,20 -7,20 -20,20C-20,7 -20,-7 -20,-20Z;M-20,-20C-7,-20 7,-20 20,-20C20,-7 20,7 20,20C7,20 -7,20 -20,20C-20,7 -20,-7 -20,-20Z;M-24,-24C-6,-9 6,-9 24,-24C9,-6 9,6 24,24C6,9 -6,9 -24,24C-9,6 -9,-6 -24,-24Z;M-24,-24C-6,-9 6,-9 24,-24C9,-6 9,6 24,24C6,9 -6,9 -24,24C-9,6 -9,-6 -24,-24Z;M-16.97,-16.97C-7.59,-26.34 7.59,-26.34 16.97,-16.97C26.34,-7.59 26.34,7.59 16.97,16.97C7.59,26.34 -7.59,26.34 -16.97,16.97C-26.34,7.59 -26.34,-7.59 -16.97,-16.97Z;M-16.97,-16.97C-7.59,-26.34 7.59,-26.34 16.97,-16.97C26.34,-7.59 26.34,7.59 16.97,16.97C7.59,26.34 -7.59,26.34 -16.97,16.97C-26.34,7.59 -26.34,-7.59 -16.97,-16.97Z" keyTimes="0;.30;.35;.58;.63;.84;.89;1" calcMode="spline" keySplines="0 0 1 1;.6 0 .2 1;0 0 1 1;.6 0 .2 1;0 0 1 1;.6 0 .2 1;0 0 1 1"/>
+            <animate attributeName="fill" dur="10s" repeatCount="indefinite"  values="#5a67ff;#5a67ff;#ee6a44;#ee6a44;#f1d86a;#f1d86a;#5a67ff;#5a67ff" keyTimes="0;.30;.35;.58;.63;.84;.89;1"/>
+            <animateTransform attributeName="transform" type="rotate" dur="10s" repeatCount="indefinite"  values="0;0;90;90;180;180;270;270" keyTimes="0;.05;.28;.36;.56;.64;.82;1" calcMode="spline" keySplines="0 0 1 1;.65 0 .35 1;0 0 1 1;.65 0 .35 1;0 0 1 1;.65 0 .35 1;0 0 1 1"/>
+          </path>
+        </g>
+      </g>
+
+  <rect class="f-p1 s-l1" x="344.5" y="42.5" width="106" height="84" rx="6"/>
+  <text class="f-mu" x="352" y="54" font-size="5" letter-spacing="1">SPEED GRAPH</text>
+  <text class="f-ac mono" x="443" y="54" font-size="5" text-anchor="end">ease-in-out</text>
+  <path class="s-l1 f-no" stroke-width=".5" d="M352 78H444M352 97H444"/>
+  <path class="s-l2 f-no" stroke-width=".7" d="M352.5 60V116.5H444"/>
+  <path class="s-mu f-no" stroke-width=".7" d="M352 116H384M444 62H412"/>
+  <circle class="f-bg s-mu" cx="384" cy="116" r="2"/><circle class="f-bg s-mu" cx="412" cy="62" r="2"/>
+  <path class="s-ac f-no" stroke-width="1.4" d="M352 116C384 116 412 62 444 62"/>
+  <circle r="3" class="f-fg">
+    <animateMotion dur="10s" repeatCount="indefinite"  path="M352 116C384 116 412 62 444 62" keyPoints="0;0;1;1;0;1;1;0;1;1" keyTimes="0;.05;.28;.355;.36;.56;.635;.64;.82;1" calcMode="linear"/>
+  </circle>
+  <text class="f-mu" x="352" y="148" font-size="5" letter-spacing="1">TEXT LAYER</text>
+  <path class="s-l1" d="M352 152.5H444"/>
+  <g clip-path="url(#mo-type)"><text class="mo-l0 f-fg" x="361" y="190" font-size="17" font-weight="600">M</text><text class="mo-l1 f-fg" x="377.1" y="190" font-size="17" font-weight="600">O</text><text class="mo-l2 f-fg" x="391.5" y="190" font-size="17" font-weight="600">T</text><text class="mo-l3 f-fg" x="403.2" y="190" font-size="17" font-weight="600">I</text><text class="mo-l4 f-fg" x="409.3" y="190" font-size="17" font-weight="600">O</text><text class="mo-l5 f-fg" x="423.7" y="190" font-size="17" font-weight="600">N</text></g>
+  <rect class="mo-ul f-ac" x="350" y="197" width="98" height="1.6" rx=".8"/>
+
+  <rect class="f-p1 s-l1" x="20.5" y="224.5" width="439" height="118" rx="8"/>
+  <path class="s-l1" d="M112.5 225V342M21 243.5H459"/>
+  <path class="f-mu" d="M30 231v6h1.2v-6zM31.5 234l4-3v6z"/>
+  <path class="f-ac" d="M42 230.5v7l6-3.5z"/>
+  <path class="f-mu" d="M58.5 231v6h-1.2v-6zM57 234l-4-3v6z"/>
+  <text class="f-mu" x="70" y="236.5" font-size="5" letter-spacing="1">TIMELINE</text>
+  <rect class="f-ac" fill-opacity=".5" x="124" y="225.5" width="319.8" height="2"/>
+  <path class="s-mu2 f-no" stroke-width=".6" d="M124 243V237M132.2 243V240M140.4 243V240M148.6 243V240M156.8 243V237M165 243V240M173.2 243V240M181.4 243V240M189.6 243V237M197.8 243V240M206 243V240M214.2 243V240M222.4 243V237M230.6 243V240M238.8 243V240M247 243V240M255.2 243V237M263.4 243V240M271.6 243V240M279.8 243V240M288 243V237M296.2 243V240M304.4 243V240M312.6 243V240M320.8 243V237M329 243V240M337.2 243V240M345.4 243V240M353.6 243V237M361.8 243V240M370 243V240M378.2 243V240M386.4 243V237M394.6 243V240M402.8 243V240M411 243V240M419.2 243V237M427.4 243V240M435.6 243V240M443.8 243V240M452 243V237"/>
+  <text class="f-mu mono" x="125.5" y="235" font-size="4.8">0s</text><text class="f-mu mono" x="158.3" y="235" font-size="4.8">1s</text><text class="f-mu mono" x="191.1" y="235" font-size="4.8">2s</text><text class="f-mu mono" x="223.9" y="235" font-size="4.8">3s</text><text class="f-mu mono" x="256.7" y="235" font-size="4.8">4s</text><text class="f-mu mono" x="289.5" y="235" font-size="4.8">5s</text><text class="f-mu mono" x="322.3" y="235" font-size="4.8">6s</text><text class="f-mu mono" x="355.1" y="235" font-size="4.8">7s</text><text class="f-mu mono" x="387.9" y="235" font-size="4.8">8s</text><text class="f-mu mono" x="420.7" y="235" font-size="4.8">9s</text><text class="f-mu mono" x="451" y="235" font-size="4.8" text-anchor="end">10s</text>
+  <rect x="30" y="251.3" width="5" height="5" rx="1" fill="#5a67ff"/><text class="f-fg" x="41" y="256" font-size="6.5">Shape</text><circle class="f-mu2" cx="103" cy="253.8" r="1.8"/><rect x="124" y="248.8" width="314.9" height="10" rx="3" fill="#5a67ff" fill-opacity=".14" stroke="#5a67ff" stroke-opacity=".35" stroke-width=".6"/><path class="mo-k00 f-fg" d="M222.4 250.20000000000002l3.6 3.6-3.6 3.6-3.6-3.6z"/><path class="mo-k01 f-fg" d="M238.8 250.20000000000002l3.6 3.6-3.6 3.6-3.6-3.6z"/><path class="mo-k02 f-fg" d="M314.2 250.20000000000002l3.6 3.6-3.6 3.6-3.6-3.6z"/><path class="mo-k03 f-fg" d="M330.6 250.20000000000002l3.6 3.6-3.6 3.6-3.6-3.6z"/><path class="mo-k04 f-fg" d="M399.5 250.20000000000002l3.6 3.6-3.6 3.6-3.6-3.6z"/><path class="mo-k05 f-fg" d="M415.9 250.20000000000002l3.6 3.6-3.6 3.6-3.6-3.6z"/><path class="s-l1" stroke-width=".5" d="M113 263.6H459"/><rect x="30" y="270.9" width="5" height="5" rx="1" fill="#ee6a44"/><text class="f-fg" x="41" y="275.59999999999997" font-size="6.5">Position</text><circle class="f-mu2" cx="103" cy="273.4" r="1.8"/><rect x="140.4" y="268.4" width="252.6" height="10" rx="3" fill="#ee6a44" fill-opacity=".14" stroke="#ee6a44" stroke-opacity=".35" stroke-width=".6"/><path class="mo-k10 f-fg" d="M140.4 269.79999999999995l3.6 3.6-3.6 3.6-3.6-3.6z"/><path class="mo-k11 f-fg" d="M215.8 269.79999999999995l3.6 3.6-3.6 3.6-3.6-3.6z"/><path class="mo-k12 f-fg" d="M242.1 269.79999999999995l3.6 3.6-3.6 3.6-3.6-3.6z"/><path class="mo-k13 f-fg" d="M307.7 269.79999999999995l3.6 3.6-3.6 3.6-3.6-3.6z"/><path class="mo-k14 f-fg" d="M333.9 269.79999999999995l3.6 3.6-3.6 3.6-3.6-3.6z"/><path class="mo-k15 f-fg" d="M393 269.79999999999995l3.6 3.6-3.6 3.6-3.6-3.6z"/><path class="s-l1" stroke-width=".5" d="M113 283.2H459"/><rect x="30" y="290.5" width="5" height="5" rx="1" fill="#f1d86a"/><text class="f-fg" x="41" y="295.2" font-size="6.5">Scale</text><circle class="f-mu2" cx="103" cy="293" r="1.8"/><rect x="124" y="288" width="314.9" height="10" rx="3" fill="#f1d86a" fill-opacity=".14" stroke="#f1d86a" stroke-opacity=".35" stroke-width=".6"/><path class="mo-k20 f-fg" d="M124 289.4l3.6 3.6-3.6 3.6-3.6-3.6z"/><path class="mo-k21 f-fg" d="M137.1 289.4l3.6 3.6-3.6 3.6-3.6-3.6z"/><path class="mo-k22 f-fg" d="M215.8 289.4l3.6 3.6-3.6 3.6-3.6-3.6z"/><path class="mo-k23 f-fg" d="M307.7 289.4l3.6 3.6-3.6 3.6-3.6-3.6z"/><path class="mo-k24 f-fg" d="M393 289.4l3.6 3.6-3.6 3.6-3.6-3.6z"/><path class="mo-k25 f-fg" d="M419.2 289.4l3.6 3.6-3.6 3.6-3.6-3.6z"/><path class="mo-k26 f-fg" d="M435.6 289.4l3.6 3.6-3.6 3.6-3.6-3.6z"/><path class="s-l1" stroke-width=".5" d="M113 302.8H459"/><rect x="30" y="310.1" width="5" height="5" rx="1" fill="#b9b3f5"/><text class="f-fg" x="41" y="314.8" font-size="6.5">Text</text><circle class="f-mu2" cx="103" cy="312.6" r="1.8"/><rect x="311" y="307.6" width="124.6" height="10" rx="3" fill="#b9b3f5" fill-opacity=".14" stroke="#b9b3f5" stroke-opacity=".35" stroke-width=".6"/><path class="mo-k30 f-fg" d="M311 309l3.6 3.6-3.6 3.6-3.6-3.6z"/><path class="mo-k31 f-fg" d="M350.3 309l3.6 3.6-3.6 3.6-3.6-3.6z"/><path class="mo-k32 f-fg" d="M412.6 309l3.6 3.6-3.6 3.6-3.6-3.6z"/><path class="mo-k33 f-fg" d="M432.3 309l3.6 3.6-3.6 3.6-3.6-3.6z"/><rect x="30" y="329.7" width="5" height="5" rx="1" fill="#8fb489"/><text class="f-fg" x="41" y="334.4" font-size="6.5">Audio</text><circle class="f-mu2" cx="103" cy="332.2" r="1.8"/>
+  <g fill="#8fb489" fill-opacity=".7"><rect x="125.0" y="330.4" width="1.6" height="3.5" rx=".8"/><rect x="128.2" y="330.1" width="1.6" height="4.3" rx=".8"/><rect x="131.4" y="329.0" width="1.6" height="6.4" rx=".8"/><rect x="134.6" y="328.2" width="1.6" height="8.1" rx=".8"/><rect x="137.8" y="327.7" width="1.6" height="8.9" rx=".8"/><rect x="141.0" y="327.1" width="1.6" height="10.2" rx=".8"/><rect x="144.2" y="328.4" width="1.6" height="7.6" rx=".8"/><rect x="147.4" y="329.4" width="1.6" height="5.6" rx=".8"/><rect x="150.6" y="330.6" width="1.6" height="3.2" rx=".8"/><rect x="153.8" y="330.6" width="1.6" height="3.2" rx=".8"/><rect x="157.0" y="328.8" width="1.6" height="6.7" rx=".8"/><rect x="160.2" y="329.0" width="1.6" height="6.5" rx=".8"/><rect x="163.4" y="328.7" width="1.6" height="6.9" rx=".8"/><rect x="166.6" y="328.9" width="1.6" height="6.5" rx=".8"/><rect x="169.8" y="329.4" width="1.6" height="5.5" rx=".8"/><rect x="173.0" y="329.3" width="1.6" height="5.7" rx=".8"/><rect x="176.2" y="330.7" width="1.6" height="2.9" rx=".8"/><rect x="179.4" y="331.2" width="1.6" height="2.0" rx=".8"/><rect x="182.6" y="331.0" width="1.6" height="2.4" rx=".8"/><rect x="185.8" y="331.1" width="1.6" height="2.2" rx=".8"/><rect x="189.0" y="330.3" width="1.6" height="3.9" rx=".8"/><rect x="192.2" y="330.6" width="1.6" height="3.2" rx=".8"/><rect x="195.4" y="330.3" width="1.6" height="3.8" rx=".8"/><rect x="198.6" y="330.1" width="1.6" height="4.1" rx=".8"/><rect x="201.8" y="330.3" width="1.6" height="3.7" rx=".8"/><rect x="205.0" y="330.1" width="1.6" height="4.2" rx=".8"/><rect x="208.2" y="330.8" width="1.6" height="2.9" rx=".8"/><rect x="211.4" y="329.8" width="1.6" height="4.8" rx=".8"/><rect x="214.6" y="328.9" width="1.6" height="6.5" rx=".8"/><rect x="217.8" y="328.3" width="1.6" height="7.9" rx=".8"/><rect x="221.0" y="327.3" width="1.6" height="9.9" rx=".8"/><rect x="224.2" y="328.2" width="1.6" height="7.9" rx=".8"/><rect x="227.4" y="328.9" width="1.6" height="6.6" rx=".8"/><rect x="230.6" y="330.0" width="1.6" height="4.4" rx=".8"/><rect x="233.8" y="331.2" width="1.6" height="2.1" rx=".8"/><rect x="237.0" y="329.2" width="1.6" height="6.1" rx=".8"/><rect x="240.2" y="328.9" width="1.6" height="6.6" rx=".8"/><rect x="243.4" y="328.2" width="1.6" height="7.9" rx=".8"/><rect x="246.6" y="328.1" width="1.6" height="8.2" rx=".8"/><rect x="249.8" y="328.4" width="1.6" height="7.6" rx=".8"/><rect x="253.0" y="328.3" width="1.6" height="7.8" rx=".8"/><rect x="256.2" y="329.9" width="1.6" height="4.5" rx=".8"/><rect x="259.4" y="330.8" width="1.6" height="2.7" rx=".8"/><rect x="262.6" y="330.8" width="1.6" height="2.7" rx=".8"/><rect x="265.8" y="330.4" width="1.6" height="3.6" rx=".8"/><rect x="269.0" y="329.5" width="1.6" height="5.4" rx=".8"/><rect x="272.2" y="330.5" width="1.6" height="3.5" rx=".8"/><rect x="275.4" y="330.8" width="1.6" height="2.8" rx=".8"/><rect x="278.6" y="331.2" width="1.6" height="2.0" rx=".8"/><rect x="281.8" y="331.0" width="1.6" height="2.5" rx=".8"/><rect x="285.0" y="330.2" width="1.6" height="4.0" rx=".8"/><rect x="288.2" y="331.2" width="1.6" height="2.0" rx=".8"/><rect x="291.4" y="330.6" width="1.6" height="3.1" rx=".8"/><rect x="294.6" y="329.9" width="1.6" height="4.5" rx=".8"/><rect x="297.8" y="329.3" width="1.6" height="5.9" rx=".8"/><rect x="301.0" y="328.0" width="1.6" height="8.3" rx=".8"/><rect x="304.2" y="328.6" width="1.6" height="7.1" rx=".8"/><rect x="307.4" y="328.9" width="1.6" height="6.6" rx=".8"/><rect x="310.6" y="329.6" width="1.6" height="5.2" rx=".8"/><rect x="313.8" y="330.7" width="1.6" height="3.0" rx=".8"/><rect x="317.0" y="329.7" width="1.6" height="4.9" rx=".8"/><rect x="320.2" y="329.3" width="1.6" height="5.8" rx=".8"/><rect x="323.4" y="328.4" width="1.6" height="7.7" rx=".8"/><rect x="326.6" y="327.8" width="1.6" height="8.8" rx=".8"/><rect x="329.8" y="327.8" width="1.6" height="8.8" rx=".8"/><rect x="333.0" y="327.5" width="1.6" height="9.4" rx=".8"/><rect x="336.2" y="329.1" width="1.6" height="6.2" rx=".8"/><rect x="339.4" y="330.2" width="1.6" height="4.0" rx=".8"/><rect x="342.6" y="331.1" width="1.6" height="2.2" rx=".8"/><rect x="345.8" y="330.2" width="1.6" height="4.0" rx=".8"/><rect x="349.0" y="328.8" width="1.6" height="6.7" rx=".8"/><rect x="352.2" y="329.4" width="1.6" height="5.7" rx=".8"/><rect x="355.4" y="329.5" width="1.6" height="5.4" rx=".8"/><rect x="358.6" y="329.9" width="1.6" height="4.6" rx=".8"/><rect x="361.8" y="330.4" width="1.6" height="3.5" rx=".8"/><rect x="365.0" y="330.1" width="1.6" height="4.1" rx=".8"/><rect x="368.2" y="331.2" width="1.6" height="2.1" rx=".8"/><rect x="371.4" y="331.2" width="1.6" height="2.1" rx=".8"/><rect x="374.6" y="330.9" width="1.6" height="2.6" rx=".8"/><rect x="377.8" y="330.5" width="1.6" height="3.5" rx=".8"/><rect x="381.0" y="329.2" width="1.6" height="6.0" rx=".8"/><rect x="384.2" y="329.6" width="1.6" height="5.2" rx=".8"/><rect x="387.4" y="329.5" width="1.6" height="5.5" rx=".8"/><rect x="390.6" y="329.7" width="1.6" height="4.9" rx=".8"/><rect x="393.8" y="330.4" width="1.6" height="3.7" rx=".8"/><rect x="397.0" y="330.4" width="1.6" height="3.7" rx=".8"/><rect x="400.2" y="330.0" width="1.6" height="4.4" rx=".8"/><rect x="403.4" y="329.0" width="1.6" height="6.5" rx=".8"/><rect x="406.6" y="328.2" width="1.6" height="8.1" rx=".8"/><rect x="409.8" y="327.8" width="1.6" height="8.8" rx=".8"/><rect x="413.0" y="327.1" width="1.6" height="10.1" rx=".8"/><rect x="416.2" y="328.5" width="1.6" height="7.4" rx=".8"/><rect x="419.4" y="329.5" width="1.6" height="5.4" rx=".8"/><rect x="422.6" y="330.7" width="1.6" height="3.0" rx=".8"/><rect x="425.8" y="330.5" width="1.6" height="3.5" rx=".8"/><rect x="429.0" y="328.7" width="1.6" height="7.0" rx=".8"/><rect x="432.2" y="328.8" width="1.6" height="6.9" rx=".8"/><rect x="435.4" y="328.5" width="1.6" height="7.3" rx=".8"/><rect x="438.6" y="328.7" width="1.6" height="6.9" rx=".8"/><rect x="441.8" y="329.3" width="1.6" height="5.8" rx=".8"/><rect x="445.0" y="329.2" width="1.6" height="5.9" rx=".8"/><rect x="448.2" y="330.7" width="1.6" height="3.0" rx=".8"/></g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" dur="10s" repeatCount="indefinite"  values="0 0;328 0" calcMode="linear"/>
+    <path d="M124 228V342" stroke="#ee6a44" stroke-width="1"/>
+    <path d="M120 228h8v5l-4 4-4-4z" fill="#ee6a44"/>
+  </g>
+</svg>
+            </div>
+            <p class="svc-anim__cap"><span><b>Fig. 05</b> Keyframes, easing and morphing on a live timeline</span><span class="svc-anim__bar" aria-hidden="true"><i></i></span><span aria-hidden="true">10s loop</span></p>
+          </div>
           <ul class="svc__list" data-reveal="stagger"><li>Animated logos</li><li>Brand motion systems</li><li>UI & product animation</li><li>Social media content</li><li>Explainer videos</li><li>Lottie & web animation</li></ul>
         </div>
       </article>
@@ -155,7 +539,80 @@
         </div>
         <div class="svc__main">
           <p class="lead" data-reveal="up">Campaigns, editorial, packaging and presentation design — art direction that keeps every piece consistent, considered and unmistakably on-brand.</p>
-          <div class="media" data-reveal="clip" data-parallax="0.06"><div class="ph ph--4" data-ph="Art Direction & Graphic Design — image / animation"></div></div>
+          <!-- Service animation (same scene as the homepage). To use your own video or Lottie, replace the .svc-anim__stage contents. -->
+          <div class="svc-anim" data-svc-anim>
+            <div class="media svc-anim__stage" data-reveal="clip" role="img" aria-label="Animation: a poster is art-directed on a grid, then shown as a print-ready campaign">
+<svg viewBox="0 0 480 360" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="ad-dots" width="4" height="4" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".85" fill="#131313" fill-opacity=".28"/></pattern>
+    <clipPath id="ad-pc-c"><rect x="182" y="78" width="116" height="164"/></clipPath>
+    <clipPath id="ad-pc-l"><rect x="50" y="78" width="116" height="164"/></clipPath>
+    <clipPath id="ad-pc-r"><rect x="314" y="78" width="116" height="164"/></clipPath>
+    <clipPath id="ad-sc-c"><circle cx="262" cy="130" r="30"/></clipPath>
+    <clipPath id="ad-sc-l"><circle cx="130" cy="130" r="30"/></clipPath>
+    <clipPath id="ad-sc-r"><circle cx="394" cy="130" r="30"/></clipPath>
+    <clipPath id="ad-tm"><rect x="186" y="168" width="110" height="46"/></clipPath>
+  </defs>
+  <g class="ad-content">
+    <g class="ad-cam">
+      <g class="ad-print">
+        <path class="s-mu f-no" stroke-width=".7" d="M34 66h-10M38 62v-10M446 66h10M442 62v-10M34 254h-10M38 258v10M446 254h10M442 258v10"/>
+        <circle cx="24" cy="160" r="5" class="f-no s-mu"/><path class="s-mu" d="M16 160h16M24 152v16"/><circle cx="456" cy="160" r="5" class="f-no s-mu"/><path class="s-mu" d="M448 160h16M456 152v16"/>
+        <rect x="186" y="262" width="10" height="8" fill="#00a3e0"/><rect x="197" y="262" width="10" height="8" fill="#e6007e"/><rect x="208" y="262" width="10" height="8" fill="#ffe600"/><rect x="219" y="262" width="10" height="8" fill="#111" stroke="rgba(239,237,232,.25)" stroke-width=".5"/><rect x="230" y="262" width="10" height="8" fill="#bbb"/><rect x="241" y="262" width="10" height="8" fill="#888"/><rect x="252" y="262" width="10" height="8" fill="#555"/><rect x="263" y="262" width="10" height="8" fill="#333"/>
+        <text class="f-mu mono" x="38" y="290" font-size="5">PROOF 02 — CAMPAIGN · 3 × A2</text>
+        <text class="f-mu mono" x="442" y="290" font-size="5" text-anchor="end">SPRING SERIES — PRINT READY</text>
+      </g>
+      
+      <g class="ad-p1">
+        <rect x="50" y="78" width="116" height="164" fill="#3b4bff"/>
+        <g clip-path="url(#ad-pc-l)"><g class="ad-sun-l"><circle cx="130" cy="130" r="30" fill="#f1d86a"/><g clip-path="url(#ad-sc-l)"><rect x="100" y="130" width="60" height="30" fill="url(#ad-dots)"/></g></g></g>
+        <text x="59" y="206" font-size="42" fill="#efede8" class="serif" letter-spacing="-1.5">Bloom</text>
+        <text x="60" y="219" font-size="5.8" font-weight="600" fill="#efede8" letter-spacing=".6">SPRING SERIES</text>
+        <path d="M60 225.5H156" stroke="#efede8" stroke-width=".6"/>
+        <rect x="60" y="229" width="40" height="1.8" fill="#efede8" fill-opacity=".5"/><rect x="60" y="233" width="34" height="1.8" fill="#efede8" fill-opacity=".5"/>
+        <text x="156" y="234" font-size="5" fill="#efede8" text-anchor="end">Vol. 03</text>
+        <text x="60" y="94" font-size="5.5" font-weight="600" fill="#efede8">N° 03</text><text x="156" y="94" font-size="5.5" fill="#efede8" text-anchor="end">2026</text>
+      </g>
+      
+      <g class="ad-p2">
+        <rect x="314" y="78" width="116" height="164" fill="#1b1b1b" stroke="rgba(239,237,232,.2)"/>
+        <g clip-path="url(#ad-pc-r)"><g class="ad-sun-r"><circle cx="394" cy="130" r="30" fill="#b9b3f5"/><g clip-path="url(#ad-sc-r)"><rect x="364" y="130" width="60" height="30" fill="url(#ad-dots)"/></g></g></g>
+        <text x="323" y="206" font-size="42" fill="#efede8" class="serif" letter-spacing="-1.5">Bloom</text>
+        <text x="324" y="219" font-size="5.8" font-weight="600" fill="#efede8" letter-spacing=".6">SPRING SERIES</text>
+        <path d="M324 225.5H420" stroke="#efede8" stroke-width=".6"/>
+        <rect x="324" y="229" width="40" height="1.8" fill="#efede8" fill-opacity=".5"/><rect x="324" y="233" width="34" height="1.8" fill="#efede8" fill-opacity=".5"/>
+        <text x="420" y="234" font-size="5" fill="#efede8" text-anchor="end">Vol. 05</text>
+        <text x="324" y="94" font-size="5.5" font-weight="600" fill="#efede8">N° 05</text><text x="420" y="94" font-size="5.5" fill="#efede8" text-anchor="end">2026</text>
+      </g>
+      <g class="ad-p0">
+        <rect x="182" y="78" width="116" height="164" fill="#efede8"/>
+        <g clip-path="url(#ad-pc-c)"><g class="ad-sun-c"><circle cx="262" cy="130" r="30" fill="#ee6a44"/><g clip-path="url(#ad-sc-c)"><rect x="232" y="130" width="60" height="30" fill="url(#ad-dots)"/></g></g></g>
+        <path class="ad-grid f-no" stroke="#5a67ff" stroke-opacity=".55" stroke-width=".5" d="M192 88V232M216 88V232M240 88V232M264 88V232M288 88V232M192 88H288M192 112H288M192 136H288M192 160H288M192 184H288M192 208H288M192 232H288"/>
+        <g clip-path="url(#ad-tm)"><text class="ad-title serif" x="191" y="206" font-size="42" fill="#131313" letter-spacing="-1.5">Bloom</text></g>
+        <text class="ad-sub" x="192" y="219" font-size="5.8" font-weight="600" fill="#131313" letter-spacing=".6">SPRING SERIES</text>
+        <path class="ad-rule f-no" pathLength="1" d="M192 225.5H288" stroke="#131313" stroke-width=".6"/>
+        <g class="ad-body"><rect x="192" y="229" width="40" height="1.8" fill="#131313" fill-opacity=".5"/><rect x="192" y="233" width="34" height="1.8" fill="#131313" fill-opacity=".5"/><text x="288" y="234" font-size="5" fill="#131313" text-anchor="end">Vol. 04</text></g>
+        <g class="ad-top"><text x="192" y="94" font-size="5.5" font-weight="600" fill="#131313">N° 04</text><text x="288" y="94" font-size="5.5" fill="#131313" text-anchor="end">2026</text></g>
+      </g>
+      <g class="ad-sel"><g class="ad-selm">
+        <rect class="f-no" stroke="#5a67ff" stroke-width=".8" stroke-dasharray="3 2" x="229.5" y="97.5" width="65" height="65"/>
+        <rect x="227.5" y="95.5" width="4" height="4" fill="#fff" stroke="#5a67ff" stroke-width=".8"/><rect x="292.5" y="95.5" width="4" height="4" fill="#fff" stroke="#5a67ff" stroke-width=".8"/><rect x="227.5" y="160.5" width="4" height="4" fill="#fff" stroke="#5a67ff" stroke-width=".8"/><rect x="292.5" y="160.5" width="4" height="4" fill="#fff" stroke="#5a67ff" stroke-width=".8"/>
+        <rect x="244" y="166" width="36" height="9" rx="2" fill="#5a67ff"/><text x="262" y="172.2" font-size="4.8" fill="#fff" text-anchor="middle" class="mono">60 × 60</text>
+      </g></g>
+      <g class="ad-cur"><path d="M0 0v12l3-2.9 2.2 5 2.1-.9-2.2-4.8h4.3z" fill="#fff" stroke="#131313" stroke-width=".8" stroke-linejoin="round"/></g>
+      <g class="ad-ok"><rect class="f-ac" x="384" y="50" width="58" height="14" rx="7"/><path d="M392 57l2.2 2.2 4.3-4.4" stroke="#fff" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="402" y="59.6" font-size="6" font-weight="600" fill="#fff">Approved</text></g>
+    </g>
+    <g class="ad-pick">
+      <text class="f-mu" x="352" y="40" font-size="5" letter-spacing="1">SWATCHES</text>
+      <rect class="f-p2 s-l2" x="350.5" y="45.5" width="87" height="27" rx="13.5"/>
+      <circle cx="364" cy="59" r="5" fill="#131313" stroke="rgba(239,237,232,.3)"/><circle cx="379" cy="59" r="5" fill="#efede8"/><circle cx="394" cy="59" r="5" fill="#ee6a44"/><circle cx="409" cy="59" r="5" fill="#5a67ff"/><circle cx="424" cy="59" r="5" fill="#f1d86a"/>
+      <circle class="ad-ring f-no s-fg" stroke-width="1" cx="394" cy="59" r="7.5"/>
+    </g>
+  </g>
+</svg>
+            </div>
+            <p class="svc-anim__cap"><span><b>Fig. 06</b> From grid to print-ready campaign</span><span class="svc-anim__bar" aria-hidden="true"><i></i></span><span aria-hidden="true">10s loop</span></p>
+          </div>
           <ul class="svc__list" data-reveal="stagger"><li>Campaign design</li><li>Packaging</li><li>Editorial & print</li><li>Pitch decks & presentations</li><li>Illustration direction</li><li>Photography direction</li></ul>
         </div>
       </article>

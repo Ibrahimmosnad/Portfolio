@@ -19,6 +19,8 @@
   background: radial-gradient(120% 90% at 50% 0%, #1c1c1c 0%, #101010 72%);
   box-shadow: inset 0 0 0 1px var(--dark-line);
 }
+/* Keep the 4:3 stage wherever a scene is placed (overrides page media ratios). */
+.svc-anim .svc-anim__stage { --ratio: 4 / 3; }
 .svc-anim__stage svg { position: absolute; inset: 0; width: 100%; height: 100%; }
 .svc-anim text { font-family: var(--font-sans); }
 .svc-anim .serif { font-family: var(--font-serif); font-style: italic; }
@@ -42,14 +44,17 @@
 .svc-anim__cap {
   display: flex; align-items: center; gap: 14px;
   margin-top: 14px;
-  font-size: var(--fs-xs); color: var(--dark-muted); letter-spacing: 0.01em;
+  font-size: var(--fs-xs); color: var(--muted); letter-spacing: 0.01em;
 }
-.svc-anim__cap b { color: var(--dark-fg); font-weight: 500; margin-right: 6px; }
+.svc-anim__cap b { color: var(--fg); font-weight: 500; margin-right: 6px; }
 .svc-anim__cap > span:first-child { flex: 0 1 auto; }
 .svc-anim__cap > span:last-child { flex: none; font-variant-numeric: tabular-nums; }
-.svc-anim__bar { flex: 1 1 40px; height: 1px; background: var(--dark-line); overflow: hidden; }
-.svc-anim__bar i { display: block; height: 100%; background: var(--dark-fg); transform-origin: 0 50%; transform: scaleX(0); }
+.svc-anim__bar { flex: 1 1 40px; height: 1px; background: var(--line); overflow: hidden; }
+.svc-anim__bar i { display: block; height: 100%; background: var(--fg); transform-origin: 0 50%; transform: scaleX(0); }
 .svc-anim.is-playing .svc-anim__bar i { animation: sa-progress var(--sa-loop) linear infinite; }
+/* Captions sit on light pages and dark sections alike */
+.section--dark .svc-anim__cap b { color: var(--dark-fg); }
+.section--dark .svc-anim__bar i { background: var(--dark-fg); }
 @keyframes sa-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 
 @media (max-width: 560px) {
