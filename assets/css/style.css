@@ -647,7 +647,8 @@ a:hover .roll > span, button:hover .roll > span, .roll:hover > span { transform:
 }
 .acc-item.is-open .acc-item__body { opacity: 1; transform: none; transition-delay: 0.15s; }
 .acc-item__media { grid-column: 2 / span 3; --ratio: 4 / 3; }
-.acc-item__text { grid-column: 6 / span 6; display: flex; flex-direction: column; gap: 24px; }
+.acc-item__visual { grid-column: 2 / span 5; min-width: 0; }
+.acc-item__text { grid-column: 8 / span 5; display: flex; flex-direction: column; gap: 24px; }
 .acc-item__text p { font-size: var(--fs-md); line-height: 1.35; letter-spacing: -0.02em; max-width: 36ch; }
 
 /* FAQ variant */
@@ -1005,7 +1006,8 @@ a:hover .roll > span, button:hover .roll > span, .roll:hover > span { transform:
 
   .acc-item__num { display: none; }
   .acc-item__title { grid-column: 1 / span 10; }
-  .acc-item__media, .acc-item__text { grid-column: 1 / -1; }
+  .acc-item__media, .acc-item__visual, .acc-item__text { grid-column: 1 / -1; }
+  .acc-item__visual { max-width: 640px; }
   .acc-item__media { max-width: 420px; }
 
   .process__sticky { position: relative; height: auto; overflow: visible; padding-block: var(--section); }

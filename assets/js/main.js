@@ -634,6 +634,7 @@
         item.classList.toggle('is-open', open);
         $('.acc-item__btn', item).setAttribute('aria-expanded', String(open));
         $('.acc-item__panel', item).inert = !open;
+        item.dispatchEvent(new CustomEvent('accordion:toggle', { bubbles: true, detail: { open } }));
       };
       items.forEach((item) => {
         setItem(item, item.classList.contains('is-open'));
@@ -642,6 +643,79 @@
           if (single) items.forEach((o) => { if (o !== item) setItem(o, false); });
           setItem(item, open);
         });
+      });
+    });
+  }
+
+  /* ---- Service animations (homepage accordion) ------------------------- */
+  // Each scene is an inline SVG animated by CSS keyframes (gated by
+  // .is-playing) plus a few SMIL elements (paths, morphs, playhead). A scene
+  // plays only while its service is open and on screen, restarts from the top
+  // whenever the service is reopened, and pauses when scrolled away.
+  function initServiceAnims() {
+    const LOOP = 10;
+    const scenes = $$('[data-svc-anim]').map((el) => ({
+      el,
+      svg: $('svg', el),
+      item: el.closest('.acc-item'),
+      timecode: $('[data-timecode]', el),
+      still: parseFloat(el.dataset.still) || 0,
+      visible: false,
+      started: false,
+    }));
+    if (!scenes.length) return;
+    const smil = (s, fn, ...args) => { if (s.svg && typeof s.svg[fn] === 'function') s.svg[fn](...args); };
+    const pad = (n) => String(n).padStart(2, '0');
+    const writeTimecode = (s, t) => {
+      if (!s.timecode) return;
+      const sec = Math.floor(t);
+      s.timecode.textContent = `00:00:${pad(sec)}:${pad(Math.floor((t - sec) * 24))}`;
+    };
+
+    scenes.forEach((s) => {
+      smil(s, 'pauseAnimations');
+      smil(s, 'setCurrentTime', reduceMotion ? s.still : 0);
+      if (reduceMotion) writeTimecode(s, s.still);
+    });
+    if (reduceMotion || !('IntersectionObserver' in window)) return;
+
+    const isOpen = (s) => !s.item || s.item.classList.contains('is-open');
+    const restart = (s) => {
+      s.el.classList.remove('is-playing', 'is-paused');
+      void s.el.offsetWidth; // flush styles so CSS animations start from 0
+      s.el.classList.add('is-playing');
+      smil(s, 'setCurrentTime', 0);
+      smil(s, 'unpauseAnimations');
+      s.started = true;
+    };
+    const update = (s) => {
+      const play = s.visible && isOpen(s);
+      if (play && !s.started) restart(s);
+      else if (play) { s.el.classList.remove('is-paused'); smil(s, 'unpauseAnimations'); }
+      else if (s.started) { s.el.classList.add('is-paused'); smil(s, 'pauseAnimations'); }
+    };
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        const s = scenes.find((x) => x.el === en.target);
+        s.visible = en.isIntersecting;
+        update(s);
+      });
+    }, { threshold: 0.2 });
+    scenes.forEach((s) => io.observe(s.el));
+
+    document.addEventListener('accordion:toggle', (e) => {
+      const s = scenes.find((x) => x.item === e.target);
+      if (!s) return;
+      if (e.detail.open) s.started = false;
+      update(s);
+    });
+
+    ticks.add(() => {
+      scenes.forEach((s) => {
+        if (s.timecode && s.started && !s.el.classList.contains('is-paused') && s.svg.getCurrentTime) {
+          writeTimecode(s, s.svg.getCurrentTime() % LOOP);
+        }
       });
     });
   }
@@ -975,7 +1049,7 @@
     [
       initHighlight, initMarquee, initHeader, initMenu, initCursor, initMagnetic,
       initTransitions, initWaves, initHero, initReel, initModal, initParallax,
-      initWorkHover, initAccordion, initCounters, initHScroll, initSlider,
+      initWorkHover, initAccordion, initServiceAnims, initCounters, initHScroll, initSlider,
       initFilters, initViewToggle, initForm, initCopy, initClock, initAnchors,
       initFooterReveal,
     ].forEach(safe);

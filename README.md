@@ -44,6 +44,23 @@ All of it lives in `assets/js/main.js`. It's vanilla JS with no libraries:
 - **Showreel** that grows from a card to full-bleed as you scroll, plus a lightbox
 - Accordions, draggable testimonial slider, animated counters, live local clock, work filters
 
+### Service animations (homepage)
+
+Each service in the homepage services accordion has its own 10-second looping animation, built as inline SVG:
+
+| Service | What the animation shows |
+| --- | --- |
+| Web Design | A website builds itself on a layout grid, then a cursor clicks the CTA, scrolls and hovers over the project cards |
+| UX / UI Design | A user flow maps out while a phone wireframe becomes the finished UI, gets redline specs, is tapped and ends on a confirmed order |
+| Brand Identity | A brand board fills in with logo, colours, type, pattern, business cards, app icon and voice, then one colour token re-themes the whole system |
+| Logo Design | A construction grid and circles draw in, the pen tool traces the mark, the guides fade and the wordmark tracks in |
+| Motion Graphics | A mini editor: a shape follows a motion path and morphs at each keyframe, with onion skins, squash and stretch, a live speed graph, kinetic type, a running timecode and a playhead that lights up keyframes on the timeline |
+| Art Direction & Graphic Design | A poster is laid out on a grid (colour picked, sun dragged into place), then the view zooms out to a three-poster print proof with crop marks and colour bars |
+
+A scene only plays while its service is open and on screen. It restarts each time the service is reopened, pauses when it scrolls away, and shows a still, finished frame to visitors who prefer reduced motion. The styles and keyframes live in `assets/css/service-anims.css`. The playback controller is `initServiceAnims()` in `main.js`.
+
+To use your own video or Lottie file for a service instead, replace the `<svg>` inside that service's `.svc-anim__stage` with a `<video autoplay muted loop playsinline>` (or your Lottie player).
+
 All of this respects `prefers-reduced-motion`, and the site stays fully readable with JavaScript turned off.
 
 ## Replacing the placeholders
