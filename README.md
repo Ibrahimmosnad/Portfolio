@@ -17,13 +17,13 @@ python3 -m http.server 8000
 
 | File | What it is |
 | --- | --- |
-| `index.html` | Home: hero with generative wave canvas, expanding showreel, intro, services marquee, selected work, services accordion, numbers, pinned horizontal process, clients, testimonials slider, CTA |
+| `index.html` | Home: hero with generative wave canvas, one-line showreel, intro, services marquee, selected work, services accordion, numbers, pinned horizontal process, clients, testimonials slider, CTA |
 | `work.html` | All projects: filter chips (with counts), grid/list toggle, parallax cards |
 | `project.html` | Case-study template, filled from `assets/js/projects.js` via `?p=slug` |
 | `services.html` | Detailed services (sticky titles), process, engagement models, FAQ |
 | `about.html` | Bio, portrait, principles, experience timeline, toolkit |
 | `contact.html` | Big email link with copy button, enquiry form (service + budget chips) |
-| `404.html` | Not-found page (GitHub Pages uses it automatically) |
+| `404.html` | Not-found page (Vercel and GitHub Pages serve it automatically) |
 
 ## Motion & interaction
 
@@ -41,8 +41,33 @@ All of it lives in `assets/js/main.js`. It's vanilla JS with no libraries:
 - **Velocity marquee**: speeds up while you scroll and reverses with the scroll direction
 - **Floating hover preview** on the home work list
 - **Pinned horizontal scroll** for the process section (it stacks vertically on mobile)
-- **Showreel** that grows from a card to full-bleed as you scroll, plus a lightbox
+- **One-line showreel** that grows from a card to full-bleed as you scroll (see below)
 - Accordions, draggable testimonial slider, animated counters, live local clock, work filters
+
+### One-line showreel (homepage)
+
+The showreel is a single continuous line, and the camera follows its tip. The line draws each discipline in turn:
+
+1. **UX / UI:** a user flow (Discover → Browse → Checkout), then a phone wireframe that fills in as a finished screen
+2. **Web:** a browser window with headline, CTA, hero image and project cards
+3. **Brand identity:** a logo on its construction circle, a colour palette, a business card and a type specimen
+4. **Motion:** an easing curve, then a bouncing ball with onion-skin frames and a keyframe timeline
+5. **Art direction:** a mood board, then a poster (sun, sea, title) with crop marks and colour bars
+6. **The Journal:** your design blog, with masthead, featured post, byline and article cards
+
+The camera then pulls back to reveal the whole journey as one line. The line sweeps down and draws the Designwave circle and wave, stops, and resolves into the logo with the wordmark beneath.
+
+How it plays:
+- It starts on its own once the frame has expanded on screen, and pauses when you scroll away.
+- Click anywhere on it, or use the button, to pause, play or replay it.
+- The chapter pills jump straight to any scene.
+- Visitors who prefer reduced motion see the finished logo, and can still press play.
+
+Where things live:
+- The drawing and timeline are generated into `index.html` (the `.rl-svg` element and the `#rl-data` JSON).
+- The player is `initLineReel()` in `main.js`.
+- The styles are in `assets/css/reel.css`.
+- To change chapter titles or taglines, edit the `chapters` list inside `#rl-data`.
 
 ### Service animations (homepage)
 
@@ -105,9 +130,23 @@ Change a box's shape with `style="--ratio: 16 / 9"`. Search the HTML for `REPLAC
 
 The form validates input and then opens the visitor's email app with the enquiry pre-filled (`mailto:`). If you want submissions delivered without an email app, point the form at a form service such as Formspree, Basin or Netlify Forms. Set the form's `action` to the service's URL, then remove the `submit` handler in `initForm()` in `main.js`, or change it to `fetch()` the service.
 
-## Deploy
+## Deploy to Vercel
 
-It works as-is on GitHub Pages (Settings → Pages → deploy from branch), Netlify, Vercel or any static host.
+The site is plain static files, so Vercel serves it as-is with no build step. `vercel.json` adds caching and security headers.
+
+**First time (about 2 minutes):**
+
+1. Go to [vercel.com/new](https://vercel.com/new) and sign in with your GitHub account.
+2. Find **Ibrahimmosnad/Portfolio** in the list and click **Import**. If it isn't listed, click **Adjust GitHub App Permissions** and give Vercel access to the repo.
+3. Leave the settings as they are:
+   - Framework Preset: **Other**
+   - Build Command: empty
+   - Output Directory: empty (the repo root)
+4. Click **Deploy**. You'll get a live URL like `portfolio-<something>.vercel.app` that you can share.
+
+**After that:** every push to GitHub deploys automatically. The production branch updates the live site, and other branches get preview links. To use your own domain, open your project on Vercel, go to **Settings → Domains** and add it.
+
+It also works on GitHub Pages, Netlify or any other static host.
 
 ## Customising the look
 

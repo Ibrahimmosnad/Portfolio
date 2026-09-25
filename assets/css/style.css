@@ -398,7 +398,6 @@ a:hover .roll > span, button:hover .roll > span, .roll:hover > span { transform:
   background: rgba(255, 255, 255, 0.28);
 }
 .ph[data-ph=""]::after { display: none; }
-.reel__frame .ph { place-items: start; padding: calc(var(--header-h) + 24px) var(--gutter); }
 .ph--1 { --ph-a: #3b4bff; --ph-b: #8e97ff; --ph-fg: rgba(255, 255, 255, 0.9); }
 .ph--2 { --ph-a: #e9562f; --ph-b: #f5a37c; --ph-fg: rgba(255, 255, 255, 0.92); }
 .ph--3 { --ph-a: #1f1f1f; --ph-b: #4a4a48; --ph-fg: rgba(255, 255, 255, 0.8); }
@@ -452,25 +451,6 @@ a:hover .roll > span, button:hover .roll > span, .roll:hover > span { transform:
   clip-path: inset(calc((1 - var(--p)) * 22%) calc((1 - var(--p)) * 28%) round calc((1 - var(--p)) * 28px + 0px));
   will-change: clip-path;
 }
-.reel__frame .media { position: absolute; inset: 0; border-radius: 0; aspect-ratio: auto; }
-.reel__frame .media > .ph { transform: scale(calc(1.25 - var(--p) * 0.25)); }
-.reel__caption {
-  position: absolute; left: var(--gutter); right: var(--gutter); bottom: var(--gutter); z-index: 2;
-  display: flex; justify-content: space-between; align-items: end; gap: 24px;
-  color: #fff; opacity: calc((var(--p) - 0.6) * 2.5);
-}
-.reel__caption .h2 { max-width: 14ch; }
-.reel__play {
-  position: absolute; left: 50%; top: 50%; z-index: 3;
-  width: 128px; height: 128px; margin: -64px 0 0 -64px; border-radius: 50%;
-  background: rgba(255, 255, 255, 0.92); color: var(--fg);
-  display: grid; place-items: center; gap: 0;
-  font-size: var(--fs-xs); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
-  transition: transform 0.5s var(--ease-out), background-color 0.3s;
-}
-.reel__play:hover { background: var(--accent); color: var(--accent-fg); }
-.reel__play .icon { width: 22px; height: 22px; fill: currentColor; stroke: none; margin-bottom: -18px; }
-
 /* Modal (showreel lightbox) */
 .modal {
   position: fixed; inset: 0; z-index: 800;

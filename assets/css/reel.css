@@ -1,0 +1,132 @@
+/* ==========================================================================
+   Designwave — one-line showreel
+   A single stroke travels through every discipline (UX/UI, web, brand,
+   motion, art direction, the journal) and resolves into the Designwave logo.
+   main.js (initLineReel) plays the timeline; this file styles the world,
+   the colour/type that blooms after the line, and the player controls.
+   ========================================================================== */
+.reel { height: 240vh; }
+.reel__frame { background: #0c0c0c; }
+
+.rl-svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.rl-svg text { font-family: var(--font-sans); }
+.rl-serif { font-family: var(--font-serif); font-style: italic; }
+.rl-mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+
+.rl-fg, .rl-fgf { fill: #efede8; }
+.rl-mu { fill: rgba(239, 237, 232, 0.5); }
+.rl-mu2f { fill: rgba(239, 237, 232, 0.2); }
+.rl-ac, .rl-acf { fill: #5a67ff; }
+.rl-acs { stroke: #5a67ff; fill: none; }
+.rl-mu2s { stroke: rgba(239, 237, 232, 0.24); fill: none; }
+.rl-panel { fill: #161616; }
+.rl-panel2 { fill: #232323; }
+.rl-screen { fill: #101010; }
+
+/* The line */
+.rl-seg {
+  fill: none;
+  stroke: #efede8;
+  stroke-width: var(--rl-sw, 2.4);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* The pen tip */
+.rl-pen { transition: opacity 0.8s var(--ease-out); }
+.rl-pen.is-hidden { opacity: 0; }
+.rl-pen__dot { fill: #fff; }
+.rl-pen__glow { fill: #5a67ff; opacity: 0.35; }
+.rl-pen__ring { fill: none; stroke: #5a67ff; stroke-width: 1.5; transform-box: fill-box; transform-origin: center; animation: rl-ping 1.6s var(--ease-out) infinite; }
+@keyframes rl-ping { from { transform: scale(1); opacity: 0.9; } to { transform: scale(2.8); opacity: 0; } }
+
+/* Colour and type that bloom once the line has passed */
+.rl-fx { opacity: 0; transition: opacity 0.9s var(--ease-out), transform 1.1s var(--ease-out); }
+.rl-fx.is-on { opacity: 1; transform: none; }
+.rl-fx--up { transform: translate(0, 18px); }
+.rl-fx--pop { transform: scale(0.3); transform-box: fill-box; transform-origin: center; }
+.rl-svg.is-seeking .rl-fx,
+.rl-svg.is-seeking .rl-journey,
+.rl-svg.is-seeking .rl-fx .rl-logo-wave,
+.rl-svg.is-seeking .rl-word { transition: none !important; }
+
+/* Finale: the journey recedes, the logo takes the stage */
+.rl-journey { transition: opacity 1.6s var(--ease-inout); }
+.rl-svg.is-final .rl-journey { opacity: 0.1; }
+.rl-logo-mark { transform: scale(0.92); transform-box: fill-box; transform-origin: center; }
+.rl-logo-wave { stroke-dasharray: 1 1; stroke-dashoffset: 1; transition: stroke-dashoffset 1.3s var(--ease-inout) 0.3s; }
+.rl-logo-mark.is-on .rl-logo-wave { stroke-dashoffset: 0; }
+.rl-word { fill: #efede8; letter-spacing: 36px; transition: opacity 1.2s var(--ease-out), letter-spacing 1.8s var(--ease-out); }
+.rl-word.is-on { letter-spacing: -5px; }
+
+/* Player UI */
+.reel__ui {
+  position: absolute; inset: 0; z-index: 2;
+  pointer-events: none;
+  color: #efede8;
+  opacity: clamp(0, calc((var(--p, 0) - 0.55) * 3), 1);
+}
+.reel__ui button { pointer-events: auto; }
+.reel__top {
+  position: absolute; left: var(--gutter); right: var(--gutter); top: calc(var(--header-h) + 12px);
+  display: flex; justify-content: space-between; gap: 16px;
+  font-size: var(--fs-xs); letter-spacing: 0.08em; text-transform: uppercase; color: rgba(239, 237, 232, 0.55);
+}
+.reel__time { font-variant-numeric: tabular-nums; }
+.reel__chapter { position: absolute; left: var(--gutter); bottom: 104px; max-width: min(560px, 70vw); transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out); }
+.reel__frame.is-resolved .reel__chapter { opacity: 0; transform: translateY(12px); }
+.reel__chapter > * { transition: opacity 0.45s var(--ease-out), transform 0.7s var(--ease-out); }
+.reel__chapter > :nth-child(2) { transition-delay: 0.04s; }
+.reel__chapter > :nth-child(3) { transition-delay: 0.08s; }
+.reel__chapter.is-changing > * { opacity: 0; transform: translateY(14px); transition-delay: 0s; }
+.reel__num { display: block; min-height: 1.2em; font-family: var(--font-serif); font-style: italic; font-size: 1.75rem; line-height: 1; color: #7c87ff; }
+.reel__title { margin-top: 6px; font-size: clamp(1.5rem, 0.9rem + 1.8vw, 2.6rem); font-weight: 500; line-height: 1; letter-spacing: -0.045em; }
+.reel__sub { margin-top: 12px; font-size: var(--fs-sm); color: rgba(239, 237, 232, 0.6); }
+
+.reel__controls {
+  position: absolute; left: var(--gutter); right: var(--gutter); bottom: 32px;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+}
+.reel__steps { display: flex; flex-wrap: wrap; gap: 6px; }
+.reel__step {
+  display: inline-flex; align-items: center; gap: 6px;
+  height: 32px; padding: 0 13px; border-radius: 99px;
+  border: 1px solid rgba(239, 237, 232, 0.18);
+  font-size: 12px; color: rgba(239, 237, 232, 0.55);
+  transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+}
+.reel__step span { font-family: var(--font-serif); font-style: italic; font-size: 14px; }
+.reel__step:hover { border-color: rgba(239, 237, 232, 0.6); color: #efede8; }
+.reel__step.is-done { color: rgba(239, 237, 232, 0.85); border-color: rgba(239, 237, 232, 0.35); }
+.reel__step.is-active { background: #efede8; border-color: #efede8; color: #0c0c0c; }
+.reel__toggle {
+  flex: none; display: inline-flex; align-items: center; gap: 10px;
+  height: 42px; padding: 0 18px 0 14px; border-radius: 99px;
+  background: rgba(239, 237, 232, 0.1); border: 1px solid rgba(239, 237, 232, 0.18);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  font-size: var(--fs-sm); color: #efede8;
+  transition: background-color 0.3s, color 0.3s;
+}
+.reel__toggle:hover { background: #efede8; color: #0c0c0c; }
+.reel__icon { position: relative; width: 12px; height: 12px; }
+.reel__icon::before, .reel__icon::after { content: ""; position: absolute; top: 0; bottom: 0; background: currentColor; transition: clip-path 0.3s var(--ease-out); }
+/* play ▶ by default, pause ❚❚ while playing */
+.reel__icon::before { left: 0; width: 12px; clip-path: polygon(0 0, 100% 50%, 0 100%); }
+.reel__icon::after { display: none; }
+[data-state="playing"] .reel__icon::before { width: 4px; clip-path: none; }
+[data-state="playing"] .reel__icon::after { display: block; right: 0; width: 4px; }
+
+.reel__progress { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: rgba(239, 237, 232, 0.12); }
+.reel__progress i { display: block; height: 100%; background: #5a67ff; transform-origin: 0 50%; transform: scaleX(0); }
+
+@media (max-width: 900px) {
+  .reel { height: 200vh; }
+  .reel__chapter { bottom: 118px; }
+  .reel__step { padding: 0 10px; font-size: 0; gap: 0; }
+  .reel__step span { font-size: 14px; }
+  .reel__toggle span:last-child { display: none; }
+  .reel__toggle { padding: 0 14px; }
+}
+@media (max-width: 560px) {
+  .reel__top-more { display: none; }
+}

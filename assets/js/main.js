@@ -461,6 +461,219 @@
     });
   }
 
+  /* ---- One-line showreel ------------------------------------------------ */
+  // A single stroke draws every discipline and resolves into the logo. The
+  // drawing lives in world coordinates inside .rl-world; this player advances
+  // a timeline, reveals each segment with stroke-dashoffset, moves the camera
+  // between scene frames and blooms colour/type ([data-fx]) behind the line.
+  function initLineReel() {
+    const frameEl = $('[data-line-reel]');
+    const dataEl = $('#rl-data');
+    if (!frameEl || !dataEl) return;
+    const svg = $('.rl-svg', frameEl);
+    const world = $('.rl-world', svg);
+    const pen = $('.rl-pen', svg);
+    const data = JSON.parse(dataEl.textContent);
+    const EASE = {
+      lin: (x) => x,
+      sine: (x) => -(Math.cos(Math.PI * x) - 1) / 2,
+      cubic: (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2),
+    };
+    const pad = (n) => String(n).padStart(2, '0');
+    const fmt = (sec) => `${pad(Math.floor(sec / 60))}:${pad(Math.floor(sec % 60))}`;
+
+    let total = 0;
+    const segs = data.segments.map((s) => {
+      const el = svg.querySelector(`.rl-seg[data-seg="${s.id}"]`);
+      const len = el ? el.getTotalLength() : 0;
+      if (el) { el.style.strokeDasharray = `${len} ${len}`; el.style.strokeDashoffset = String(len); }
+      const seg = { ...s, el, len, t0: total, p: -1 };
+      total += s.dur;
+      return seg;
+    });
+    const byId = Object.fromEntries(segs.map((s) => [s.id, s]));
+    const fx = $$('[data-fx]', svg).map((el) => {
+      const [id, frac] = el.dataset.fx.split(':');
+      const s = byId[id];
+      return { el, time: s ? s.t0 + parseFloat(frac) * s.dur : 0, on: false };
+    });
+    const finalAt = byId.logo ? byId.logo.t0 : total;
+    const penHideAt = byId.hold2 ? byId.hold2.t0 + 0.9 : total;
+    const resolvedAt = byId.hold2 ? byId.hold2.t0 + 0.2 : total;
+    const chapterStart = {};
+    segs.forEach((s) => { if (!(s.ch in chapterStart)) chapterStart[s.ch] = s.t0; });
+
+    const ui = {
+      time: $('[data-reel-time]', frameEl),
+      chapter: $('[data-reel-chapter]', frameEl),
+      num: $('[data-reel-num]', frameEl),
+      title: $('[data-reel-title]', frameEl),
+      sub: $('[data-reel-sub]', frameEl),
+      toggle: $('[data-reel-toggle]', frameEl),
+      toggleLabel: $('[data-reel-toggle-label]', frameEl),
+      progress: $('[data-reel-progress]', frameEl),
+      steps: $$('[data-reel-step]', frameEl),
+    };
+
+    let t = 0;
+    let playing = false;
+    let lastNow = 0;
+    let cw = 1;
+    let ch = 1;
+    let visible = false;
+    let autoplayed = false;
+    let userPaused = false;
+    let dirty = true;
+    let chapter = null;
+    let chapterTimer = 0;
+
+    const resize = () => {
+      cw = svg.clientWidth || 1;
+      ch = svg.clientHeight || 1;
+      svg.setAttribute('viewBox', `0 0 ${cw} ${ch}`);
+      dirty = true;
+    };
+
+    const setChapter = (id) => {
+      chapter = id;
+      const idx = data.chapters.findIndex((c) => c.id === id);
+      const c = data.chapters[Math.max(0, idx)];
+      ui.chapter.classList.add('is-changing');
+      clearTimeout(chapterTimer);
+      chapterTimer = setTimeout(() => {
+        ui.num.textContent = c.num;
+        ui.title.textContent = c.title;
+        ui.sub.textContent = c.sub;
+        ui.chapter.classList.remove('is-changing');
+      }, 320);
+      ui.steps.forEach((b) => {
+        const k = data.chapters.findIndex((x) => x.id === b.dataset.reelStep);
+        b.classList.toggle('is-active', k === idx);
+        b.classList.toggle('is-done', k < idx);
+        if (k === idx) b.setAttribute('aria-current', 'step'); else b.removeAttribute('aria-current');
+      });
+    };
+
+    const render = () => {
+      let i = segs.findIndex((s) => t < s.t0 + s.dur);
+      if (i < 0) i = segs.length - 1;
+      const s = segs[i];
+      const local = clamp((t - s.t0) / s.dur, 0, 1);
+      const e = EASE[s.ease](local);
+
+      segs.forEach((x, k) => {
+        if (!x.el) return;
+        const p = k < i ? 1 : k > i ? 0 : e;
+        if (p !== x.p) { x.el.style.strokeDashoffset = String(x.len * (1 - p)); x.p = p; }
+      });
+
+      let pt;
+      if (s.el) pt = s.el.getPointAtLength(s.len * e);
+      else {
+        const prev = segs.slice(0, i).reverse().find((x) => x.el);
+        pt = prev ? prev.el.getPointAtLength(prev.len) : { x: data.start[0], y: data.start[1] };
+      }
+
+      const ce = EASE[s.camEase](local);
+      const [ax, ay, aw, ah] = s.cam0;
+      const [bx, by, bw, bh] = s.cam1;
+      const cx = lerp(ax, bx, ce);
+      const cy = lerp(ay, by, ce);
+      const fw = Math.exp(lerp(Math.log(aw), Math.log(bw), ce));
+      const fh = Math.exp(lerp(Math.log(ah), Math.log(bh), ce));
+      // Narrow portrait screens zoom in a little (per-segment factor) so drawings stay legible.
+      const pz = cw / ch < 0.75 ? lerp(s.pz[0], s.pz[1], ce) : 1;
+      const sc = Math.min(cw / fw, ch / fh) / pz;
+      world.setAttribute('transform', `translate(${(cw / 2).toFixed(1)} ${(ch / 2).toFixed(1)}) scale(${sc.toFixed(5)}) translate(${(-cx).toFixed(1)} ${(-cy).toFixed(1)})`);
+      svg.style.setProperty('--rl-sw', (2.3 / Math.pow(sc, 0.8)).toFixed(3));
+      pen.setAttribute('transform', `translate(${pt.x.toFixed(1)} ${pt.y.toFixed(1)}) scale(${(1 / sc).toFixed(4)})`);
+      pen.classList.toggle('is-hidden', t >= penHideAt);
+
+      fx.forEach((f) => {
+        const on = t >= f.time;
+        if (on !== f.on) { f.el.classList.toggle('is-on', on); f.on = on; }
+      });
+      svg.classList.toggle('is-final', t >= finalAt);
+      frameEl.classList.toggle('is-resolved', t >= resolvedAt);
+
+      if (s.ch !== chapter) setChapter(s.ch);
+      ui.time.textContent = `${fmt(t)} / ${fmt(total)}`;
+      ui.progress.style.transform = `scaleX(${(t / total).toFixed(4)})`;
+      dirty = false;
+    };
+
+    const setState = (state) => {
+      frameEl.dataset.state = state;
+      const label = state === 'playing' ? 'Pause' : state === 'ended' ? 'Replay' : 'Play';
+      ui.toggleLabel.textContent = label;
+      ui.toggle.setAttribute('aria-label', `${label} showreel`);
+      frameEl.dataset.cursorLabel = label;
+      const cursorLabel = $('.cursor.is-view .cursor__label');
+      if (cursorLabel) cursorLabel.textContent = label;
+    };
+    const seek = (to) => {
+      svg.classList.add('is-seeking');
+      t = clamp(to, 0, total);
+      render();
+      void svg.getBoundingClientRect(); // commit the jump before re-enabling transitions
+      svg.classList.remove('is-seeking');
+    };
+    const play = () => {
+      if (t >= total) seek(0);
+      playing = true;
+      lastNow = performance.now();
+      setState('playing');
+    };
+    const pause = () => {
+      playing = false;
+      setState(t >= total ? 'ended' : 'paused');
+    };
+    const toggle = () => {
+      if (playing) { pause(); userPaused = true; } else { play(); userPaused = false; }
+    };
+
+    resize();
+    onResize.add(resize);
+    ui.toggle.addEventListener('click', toggle);
+    frameEl.addEventListener('click', (e) => { if (!e.target.closest('button')) toggle(); });
+    ui.steps.forEach((b) => b.addEventListener('click', () => {
+      seek((chapterStart[b.dataset.reelStep] || 0) + 0.001);
+      play();
+      userPaused = false;
+    }));
+
+    if (reduceMotion) {
+      // Show the finished identity; playback stays one click away.
+      seek(total);
+      setState('ended');
+    } else {
+      render();
+      setState('idle');
+    }
+
+    new IntersectionObserver(([en]) => {
+      visible = en.isIntersecting;
+      if (visible) dirty = true;
+      if (!visible && playing) { playing = false; setState('paused'); }
+      else if (visible && autoplayed && !userPaused && frameEl.dataset.state === 'paused') play();
+    }, { threshold: 0.2 }).observe(frameEl);
+
+    ticks.add((now) => {
+      if (!visible) return;
+      if (!autoplayed && !reduceMotion && parseFloat(frameEl.style.getPropertyValue('--p') || '0') > 0.45) {
+        autoplayed = true;
+        play();
+      }
+      if (playing) {
+        t = Math.min(total, t + Math.min((now - lastNow) / 1000, 0.1));
+        dirty = true;
+        if (t >= total) pause();
+      }
+      lastNow = now;
+      if (dirty) render();
+    });
+  }
+
   /* ---- Modal (showreel lightbox) --------------------------------------- */
   function initModal() {
     let lastFocus = null;
@@ -1048,7 +1261,7 @@
     $$('[data-split]').forEach((el) => safe(() => split(el)));
     [
       initHighlight, initMarquee, initHeader, initMenu, initCursor, initMagnetic,
-      initTransitions, initWaves, initHero, initReel, initModal, initParallax,
+      initTransitions, initWaves, initHero, initReel, initLineReel, initModal, initParallax,
       initWorkHover, initAccordion, initServiceAnims, initCounters, initHScroll, initSlider,
       initFilters, initViewToggle, initForm, initCopy, initClock, initAnchors,
       initFooterReveal,
