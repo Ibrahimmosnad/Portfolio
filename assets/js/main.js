@@ -8,7 +8,7 @@
 
   /* ---- Site settings — edit these ------------------------------------- */
   const SITE = {
-    email: 'hello@yourdomain.com', // where the contact form sends enquiries
+    email: 'designwave36@gmail.com', // where the contact form sends enquiries
     timeZone: null,                // e.g. 'Europe/Berlin'; null = visitor's local time
   };
 

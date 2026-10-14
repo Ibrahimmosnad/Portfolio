@@ -149,7 +149,7 @@ Change a box's shape with `style="--ratio: 16 / 9"`. Search the HTML for `REPLAC
 
 ## Things you must edit before publishing
 
-1. **Email.** Replace `hello@yourdomain.com` everywhere (search and replace across the folder). The contact form's recipient is set in `SITE.email` at the top of `assets/js/main.js`.
+1. **Email.** The site uses `designwave36@gmail.com`. To change it, edit `SITE.email` at the top of `assets/js/main.js` (contact form) and search-and-replace the address in the HTML pages.
 2. **Time zone.** Set `SITE.timeZone` in `main.js` (for example `'Europe/Berlin'`) so the "Local time" clock shows your studio time.
 3. **Projects are sample content.** The eight projects (Aurora, Kiln & Co., Pulse, …) are fictional placeholders, and so are their results figures. Replace them with your real work:
    - the case-study text and results live in `assets/js/projects.js`
