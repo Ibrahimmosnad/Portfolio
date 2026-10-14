@@ -88,6 +88,25 @@ To use your own video or Lottie file for a service instead, replace the `<svg>` 
 
 All of this respects `prefers-reduced-motion`, and the site stays fully readable with JavaScript turned off.
 
+## Logo files
+
+Everything is in `assets/logo/`. The quickest way to grab it all is `designwave-logo-pack.zip`, which holds every file below plus a preview sheet.
+
+| File | Use it for |
+| --- | --- |
+| `designwave-logo` | **Primary logo:** blue mark with an ink wordmark, for light backgrounds |
+| `designwave-logo-reversed` | Blue mark with a cream wordmark, for dark backgrounds |
+| `designwave-logo-black` / `-white` | One-colour versions, for print, stamps or photos and coloured backgrounds |
+| `designwave-logo-stacked` (+ `-reversed`) | Mark above the wordmark, for square spaces such as social posts and merch |
+| `designwave-mark` (+ `-black` / `-white`) | The mark on its own, for profile pictures, app icons and the favicon |
+| `designwave-wordmark` (+ `-reversed`) | The name on its own |
+
+- **Formats:** every file comes as an SVG (`svg/`, scalable, best for web and print) and a transparent PNG (`png/`: logos 2400px wide, stacked 1600px, marks 1024px).
+- **Fonts:** the wordmark is converted to outlines, so it needs no font installed (Inter Tight SemiBold, letter-spacing −0.04em).
+- **One-colour marks:** the wave is cut out of the circle, so they work on any background.
+- **Colours:** Primary blue `#3B4BFF`, Ink `#0F0F0F`, Cream `#EFEDE8`.
+- **Clear space:** keep at least half the mark's width empty around the logo.
+
 ## Replacing the placeholders
 
 Every image, video and animation slot is a striped placeholder labelled with what belongs there:
