@@ -107,6 +107,19 @@ Everything is in `assets/logo/`. The quickest way to grab it all is `designwave-
 - **Colours:** Primary blue `#3B4BFF`, Ink `#0F0F0F`, Cream `#EFEDE8`.
 - **Clear space:** keep at least half the mark's width empty around the logo.
 
+## Social covers
+
+These are in `assets/social/`:
+
+| File | Size | Where it goes |
+| --- | --- | --- |
+| `designwave-facebook-cover.png` | 1640×720 | Facebook cover photo (profile or Page) |
+| `designwave-facebook-cover-guide.png` | 1640×720 | Reference only, not for upload: shows what desktop and mobile crop, and where the profile photo sits |
+| `designwave-whatsapp-cover.png` | 1920×1080 (16:9) | WhatsApp Business cover photo |
+| `designwave-profile-photo.png` | 1080×1080 | Profile picture for Facebook and WhatsApp (safe for the circular crop) |
+
+All key content sits in the centre so it survives every crop. After uploading, use Facebook's or WhatsApp's reposition tool if the preview needs a nudge.
+
 ## Replacing the placeholders
 
 Every image, video and animation slot is a striped placeholder labelled with what belongs there:
